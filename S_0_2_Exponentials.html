@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-15T13:52:29-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exponential Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\titlecolor{#1}
+\def\scl{0.8}
+\def\titlebackground{#1}
+\def\scl{0.9}
+\def\background{#1}
+\def\scl{0.7}
+\def\titleboxcolor{#1}
+\def\boxcolor{#1}
+\def\thcounter{#1}
+\def\size{#1}
+\newcommand{\titre}{Titre}
+\renewcommand{\titre}{#2}
+\renewcommand{\theacti}{\thechapter.\arabic{acti}}
+\newcommand{\saveCount}{\setcounter{lastenum}{\value{enumi}}}
+\newcommand{\restoreCount}{\setcounter{enumi}{\value{lastenum}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bei}{\begin{numlist2}}
+\newcommand{\eei}{\end{numlist2}}
+\newcommand{\ba}{\begin{enumerate}}
+\newcommand{\ea}{\end{enumerate}}
+\newcommand{\bal}{\begin{alphalist2}}
+\newcommand{\eal}{\end{alphalist2}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\btl}{\begin{thmlist}}
+\newcommand{\etl}{\end{thmlist}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bolda}{\boldsymbol{a}}
+\newcommand{\boldx}{\boldsymbol{x}}
+\newcommand{\boldy}{\boldsymbol{y}}
+\newcommand{\boldb}{\boldsymbol{b}}
+\newcommand{\boldv}{\boldsymbol{v}}
+\newcommand{\boldu}{\boldsymbol{u}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\by}{\boldsymbol{y}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bd}{\boldsymbol{d}}
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
+\newcommand{\afterex}{\begin{center}\underline{}\end{center}}
+\newcommand{\afterexercises}{\nin \vfill \ }
+\newcommand{\nin}{}
+\newcommand{\tr}{\vspace{0.5in}}
+\newcommand{\lr}{\vspace{1.0in}}
+\newcommand{\mr}{\vspace{2.0in}}
+\newcommand{\br}{\vspace{3.0in}}
+\newcommand{\afterpa}{\hfill $\bowtie$}
+\newcommand{\aftera}{\hfill $\lhd$}
+\newcommand{\T}{}
+\newcommand{\B}{\rule[-1.2ex]{0pt}{0pt}}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\solution}{\textbf{Solution.}}
+\newcommand{\myunit}{1 cm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Active Calculus: Matt Boelkins (Lead Author), Eric Sullivan (Local Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_0_1_Functions.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_0_3_Transformations.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_0_1_Functions.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_0_3_Transformations.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link active"><a href="C_0.html" data-scroll="C_0"><span class="codenumber">0</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="S_0_1_Functions.html" data-scroll="S_0_1_Functions">Lines, Slope, and Functions</a></li>
+<li><a href="S_0_2_Exponentials.html" data-scroll="S_0_2_Exponentials" class="active">Exponential Functions</a></li>
+<li><a href="S_0_3_Transformations.html" data-scroll="S_0_3_Transformations">Transformations, Compositions, and Inverses</a></li>
+<li><a href="S_0_4_Logarithms.html" data-scroll="S_0_4_Logarithms">Logarithmic Functions</a></li>
+<li><a href="S_0_5_TrigFunctions.html" data-scroll="S_0_5_TrigFunctions">Trigonometric Functions</a></li>
+<li><a href="S_0_6_PowersPolysRationals.html" data-scroll="S_0_6_PowersPolysRationals">Powers, Polynomials, and Rational Functions</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_0_2_Exponentials"><header title="Section 1.2 Exponential Functions"><h1 class="heading hide-type" alt="Section 1.2 Exponential Functions">
+<span class="type">Section</span><span class="codenumber">0.2</span><span class="title">Exponential Functions</span><a href="S_0_2_Exponentials.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-2"><article class="objectives" id="objectives-2"><h5 class="heading"><span class="type">Objectives</span></h5>
+<ul id="ul-6" style="list-style-type: disc;">
+<li id="li-73"><p id="p-131">How can exponential functions be used to model growth and decay of populations, investments, radioactive isotopes, and many other physical phenomena?</p></li>
+<li id="li-74"><p id="p-132">How can we build exponential functions from data?</p></li>
+</ul></article><p id="p-133">The exponential function is a powerful tool in the mathematician's arsenal for modeling growth and decay phenomena. The common applications of the exponential funciton range from population modeling, to tracking drug levels in the blood stream, to using carbon dating to estimate the age of an artifact. The common mathematical fact about all of these situations is that the growth (or decay) rate is a constant multiple. For example, if we are measuring exponential population growth then the ratio of two successive populations must be constant. Linear functions have a similar behavior, except that in linear functions the difference (not the ratio) between two successive values is constant (the slope).</p>
+<article class="example-like" id="PA_0_2"><h5 class="heading">
+<span class="type">Preview Activity</span><span class="codenumber">0.2.1</span>
+</h5>
+<p id="p-134">Suppose that the populations of two towns are both growing over time. The town of Exponentia is growing at a rate of 2% per year, and the town of Lineola is growing at a rate of 100 people per year. In 2014, both of the towns have 2,000 people. </p>
+<ol id="ol-18" style="list-style-type: lower-alpha;">
+<li id="li-75"><p id="p-135">Complete the table for the population of each of these towns over the next several years. <table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">2014</td>
+<td class="l m b0 r0 l0 t0 lines">2015</td>
+<td class="l m b0 r0 l0 t0 lines">2016</td>
+<td class="l m b0 r0 l0 t0 lines">2017</td>
+<td class="l m b0 r0 l0 t0 lines">2018</td>
+<td class="l m b0 r0 l0 t0 lines">2019</td>
+<td class="l m b0 r0 l0 t0 lines">2020</td>
+<td class="l m b0 r0 l0 t0 lines">2021</td>
+<td class="l m b0 r0 l0 t0 lines">2022</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Exponentia</td>
+<td class="l m b0 r0 l0 t0 lines">2000</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Lineola</td>
+<td class="l m b0 r0 l0 t0 lines">2000</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table></p></li>
+<li id="li-76"><p id="p-136">Write a linear function for the population of Lineola. Interpret the slope in the context of this problem.</p></li>
+<li id="li-77"><p id="p-137">The ratio of successive populations for Exponentia should be equal.  For example, dividing the population in 2015 by that of 2014 should give the same ratio as when the population from 2016 is divided by the population of 2015.  Find this ratio.  How is this ratio related to the 2% growth rate?</p></li>
+<li id="li-78"><p id="p-138">Based on your data from part (a) and your ratio in part (c), write a function for the population of Exponentia.</p></li>
+<li id="li-79"><p id="p-139">When will the population of Exponentia exceed that of Lineola?</p></li>
+</ol></article></section><section class="subsection" id="subsection-6"><header title="Subsection 1.2.1 Exponential Functions"><h1 class="heading hide-type" alt="Subsection 1.2.1 Exponential Functions">
+<span class="type">Subsection</span><span class="codenumber">0.2.1</span><span class="title">Exponential Functions</span>
+</h1></header><p id="p-140">Consider the example where the population of a bacteria colony is doubling every week. If in the first week there are 100 bacteria, then there are 200 bacteria by the end of the second week, 400 by the end of the third and so on. In <a knowl="./knowl/tab_0_2_bacteria.html" knowl-id="xref-tab_0_2_bacteria" alt="Table 1.2.1 " title="Table 1.2.1 ">Table 1</a> we can see a simple way to model this type of growth:</p>
+\begin{gather*}
+P(t) = 100 \cdot 2^t  \text{  (\(t=\) number of weeks) }
+\end{gather*}
+<figure class="figure-like" id="tab_0_2_bacteria"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Week</td>
+<td class="l m b0 r0 l0 t0 lines">Bacteria</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">\(100\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">\(100 \cdot 2=200\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">\(200 \cdot 2 = 100 \cdot 2^2=400\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">\(400 \cdot 2 = 100 \cdot 2^3=800\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\( \vdots \)</td>
+<td class="c m b0 r0 l0 t0 lines">\( \vdots \)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.2.1</span>Bacteria population doubling</figcaption></figure>
+<p id="p-141">The time, \(t\), in the previous equation is measured in weeks. It is easy to see that the ratio of the populations for each successive week is constant at \(P(t+1)/P(t) = 2\text{.}\) This is indicative of exponential growth. Of course, this population growth could have been modeled using time measured in days instead. The population still doubles every week so for this new model the value at \(t=7\) should be double the value at \(t=0\text{.}\) The next equation shows this new model with only a slight modification adjusting for the new time measurement.</p>
+\begin{gather*}
+P(t) = 100 \cdot 2^{t/7}  \text{ (\(t=\) number of days) }
+\end{gather*}
+<p id="p-142">This type of modeling and thought process can be used to describe most exponential growth and decay situations. One general formula for an exponential function is</p>
+\begin{gather*}
+f(x) = A \cdot r^{kx}
+\end{gather*}
+<p>where \(A\) is some given initial value, \(r\) is the common ratio, and \(k\) is a constant given by the frequency in which the common ratio is applied. In the previous population doubling example, \(A=100\text{,}\) \(r=2\text{,}\) and \(k=1/7\text{.}\)</p>
+
+<article class="assemblage-like" id="exponential_growth_decay_rules">
+    <h5 class="heading">Exponential Growth and Decay</h5>
+    <p>
+    <p id="p-143">A few simple guidelines should make it clear when an exponential function in the form \(f(x) = A \cdot r^{kx} \) is modeling growth or decay. </p>
+<ul id="ul-7" style="list-style-type: disc;">
+<li id="li-80"><p id="p-144">If \(r &gt; 1\) then the function exhibits exponential growth.</p></li>
+<li id="li-81"><p id="p-145">If \(0 \lt  r \lt  1\) then the function exhibits exponential decay.</p></li>
+</ul>
+    </p>
+</article>
+<article class="assemblage-like" id="exponential_growth_decay_rules">
+    <h5 class="heading">Growth and Decay Rates</h5>
+    <p>
+<ul style="list-style-type: disc;">
+<li id="li-82"><p id="p-146">If a population is growing by \(p\%\) per unit time, then \(r = 1+p/100\text{.}\)</p></li>
+<li id="li-83"><p id="p-147">If a population is decreasing by \(p\%\) per unit time, then \(r = 1-p/100\text{.}\)</p></li>
+</ul>
+    </p>
+</article>
+
+
+<!-- **************************************************** -->
+<article class="example-like" id="A_0_2_1"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.2.2</span>
+</h5>
+      <p>
+      Consider the exponential functions plotted in the figure below. <!-- <xref ref="F_0_2_Act1">Figure</xref> -->
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              Which of the functions have common ratio \(r > 1\)?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Which of the functions have common ratio \(0\lt r\lt  1\)?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Rank each of the functions in order from largest to smallest \(r\) value.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <center>
+          <figure>
+              <img src="images/0-2-figAct1.svg" width="95%">
+          </figure>
+      </center>
+<!--
+      <figure xml:id="F_0_2_Act1" >
+        <caption>Exponential growth and decay functions</caption>
+        <image width="60%" source="images/0-2-figAct1" />
+      </figure>
+-->
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_2_1" id="hint-act_2_1"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_2_1" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                If the common ratio is larger than 1 what will happen to the \(y\) values?
+                For example, if the common ratio were 2 and we start with 5 then what would
+                the next value be?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If the comon ratio is less than 1 what will happen to the \(y\) values?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Do some experimentation to determine which ones will be steeper or less
+                steep.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_2_1" id="solution-act_2_1"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_2_1" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                blue, red, dark green
+              </p>
+            </li>
+
+            <li>
+              <p>
+                cyan and black
+              </p>
+            </li>
+
+            <li>
+              <p>
+                blue is \(y = 2^x\), red is \(y = 3^x\), dark green is \(y=1.5^x\), cyan is
+                \(y=0.9^x\), and black is \(y=0.5^x\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-5" id="example-5"> -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.2.3</span>
+</h5>
+<p id="p-160">One application to exponential decay is to calculate the intensity of radiation from radioactive isotopes. Most isotopes emit particles and decay into stable forms. We measure the rate of decay from the particles by the isotope's half-life, which is how long it takes half of the isotope to decay. The half-life for Sodium-25 (\(Na^{25}\)) is almost exactly one minute. Write a function that models that amount of \(Na^{25}\) over time if you start with exactly 36 grams.
+</p></article>
+<!-- </div>
+</article></a></div> -->
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2_ex1" id="solution-2_ex1">
+            <span class="solution"><span class="type">Solution</span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-2_ex1" style="display: none;" class="tex2jax_ignore">
+        <span class="solution">
+            <p id="p-161">If you begin with 36 grams of \(Na^{25}\) then the number of grams remaining after \(t\) minutes, \(S(t)\text{,}\) can be represented by the function</p>
+            \begin{equation*}
+            S(t) = 36 \left( \frac{1}{2} \right)^{t},
+            \end{equation*}
+            <p>where \(t\) is measured in minutes.  The figure below 
+            shows this exponential decay function with an initial value of 36 and a value of 18 after 1 day.  That is, the points \( (0,36) \) and \( (1,18) \) are on the exponential decay curve.</p>
+            <figure>
+                <img src="images/0-2-fig2.svg" width="80%">
+            </figure>
+<!-- <figure class="figure-like" id="F_0_2_Ex1"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/0-2-fig2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.2.4</span>The grams of Sodium-25 remaining as a function of time. The blue point represents the initial value \((0,36)\) and the red point represents the value after 1 minute \((1,18)\text{.}\)</figcaption></figure>
+-->
+    </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+<!-- **************************************************** -->
+<article class="example-like" id="A_0_2_2"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.2.3</span>
+</h5>
+
+      <p>
+        A sample of \(Ni^{56}\) has a half-life of 6.4 days. Assume that there are 30 grams
+        present initially.
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              Write a function describing the number of grams of \(Ni^{56}\) present as a
+              function of time.  Check your function based on the fact that in 6.4 days
+              there should be 50% remaining.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What percent of the substance is present after 1 day?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What percent of the substance is present after 10 days?
+            </p>
+          </li>
+        </ol>
+      </p>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_2_2" id="hint-act_2_2"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_2_2" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                The growth rate should be \( 1/2 \).
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Figure out how much is there after 1 day and divide by the original amount.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Figure out how much is there after 10 days and divide by the original amount.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_2_2" id="solution-act_2_2"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_2_2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                \(A(t) = 30 \left( \frac{1}{2}  \right)^{t/6.4}\)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(A(1) =  30 \left( \frac{1}{2}  \right)^{1/6.4} \approx 26.9206\) so the
+                percent that remains is just shy of 90%.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(A(10) =  30 \left( \frac{1}{2}  \right)^{10/6.4} \approx 10.1569\) so the
+                percent that remains is about 33.9%.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+<article class="example-like" id="A_0_2_3"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.2.4</span>
+</h5>
+      <p>
+        Uncontrolled geometric growth of the bacterium <em>Escherichia coli (E. Coli)</em> is the
+        theme of the following quote taken from the best-selling author Michael Crichton's
+        science fiction thriller, <em>The Andromeda Strain:</em>
+      </p>
+      <blockquote>
+      <q>The mathematics of uncontrolled growth are frightening.  A single cell of the
+      bacterium E. coli would, under ideal circumstances, divide every twenty minutes.
+      That is not particularly disturbing until you think about it, but the fact is that
+      that bacteria multiply geometrically: one becomes two, two become four, four
+      become eight, and so on.  In this way it can be shown that in a single day, one
+      cell of E. coli could produce a super-colony equal in size and weight to the
+      entire planet Earth.</q>
+      </blockquote>
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            Write an equation for the number of E. coli cells present if a single cell
+            of E. coli divides every 20 minutes.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            How many E. coli would there be at the end of 24 hours?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The mass of an E. coli bacterium is \(1.7 \times 10^{-12}\) grams, while the
+            mass of the Earth is \(6.0 \times 10^{27}\) grams.  Is Michael Crichton's claim
+            accurate?  Approximate the number of hours we should have allowed for this
+            statement to be correct?
+          </p>
+        </li>
+      </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_2_3" id="hint-act_2_3"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_2_3" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                What is the common ratio?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Be sure to get your units correct.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                You might want to tackle this problem graphically if you need a refresher on logarithms (the refresher is in section 4 of this chapter).  If, however, you remember how to work with logarithms you should write an equation that equates the mass of the earth to the mass of E. coli at any time \(t\). Then solve for \(t\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_2_3" id="solution-act_2_3"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_2_3" style="display: none;" class="tex2jax_ignore"><span class="solution">
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                \(P(t) = P_0 \cdot 2^{t/20}\) where \(t\) is measured in minutes.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Assuming that \(P_0 = 1\), \(P(1440) = 2^{1440/20} \approx 4.72 \times 10^{21}\).
+              </p>
+            </li>
+
+            <li>
+              <p>
+              First we set the weight of the earth equal to the function that describes the weight of the E. coli.  
+              \begin{gather*}
+                  6.0 \times 10^{27} = \left( 1.7 \times 10^{-12} \right) \cdot 2^{t/20} 
+              \end{gather*}
+              Dividing by the coefficient on the right-hand side gives \( 3.529 \times 10^{39} = 2^{t/20} \) and taking the base-2 logarithm of both sides gives \( \log_2\left( 3.529 \times 10^{39} \right) = \frac{t}{20} \).  Multiplying by \(20\) we therefore see that it will take approximately \( 2627.5 \text{ minutes } \) for the mass of E. coli to equal the mass of the earth which is just shy of 2 days.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+</section><section class="subsection" id="subsection-7"><header title="Subsection 1.2.2 Investments"><h1 class="heading hide-type" alt="Subsection 1.2.2 Investments">
+<span class="type">Subsection</span><span class="codenumber">0.2.2</span><span class="title">Investments</span>
+</h1></header><p id="p-186">Interest bearing bank accounts and investments follow exponential growth and decay models. In the case of a savings accounts the interest is typically compounded several times per year. This means that the investor is getting interest on their interest every time the bank computes the interest.</p>
+<p id="p-187">If the money is gaining \(p\%\) interest compounded \(n\) times per year then the common ratio for the exponential function is \(1 + p/n\text{.}\) The exponent needs to reflect the fact that the interest occurs at monthly intervals. This means that the exponential function is</p>
+\begin{gather*}
+A(t) = A_0 \left( 1+\frac{p}{n} \right)^{nt}  \text{ (\(t=\) number of years) } .
+\end{gather*}
+<p id="p-188">In the previous equation, \(A_0\) is the initial investment, \(A(t)\) is the value of the investment over time, \(p\) is the interest rate, and \(n\) is the number of times the interest is compounded per year.</p>
+
+
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-x0_2_Ex2" id="x0_2_Ex2"> -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.2.5</span>
+</h5>
+<!-- <div id="hk-x0_2_Ex2" style="display: none;" class="tex2jax_ignore"<article class="example-like">-->
+<p id="p-189">If $100 are invested into a bank account earning 2% interest compounded 12 times per year, how much does the investor have at the end of 1 year? 5 years? at retirement age? How does this change is we compound quarterly or daily instead of monthly?
+        </p>
+    </article>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2_ex2" id="solution-2_ex2">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-2_ex2" style="display: none;" class="tex2jax_ignore">
+        <span class="solution">
+<p id="p-190">In the present situation the function modeling the value of the investment is</p>
+\begin{equation*}
+A(t) = 100 \left( 1 + \frac{0.02}{12} \right)^{12t}.
+\end{equation*}
+<p id="p-191">The table below shows the value of the investment over the first 5 years. It is clear that this is very slow growth, but it is exponential none the less. The common ratio in this case is \(r = (1+0.02/12) \approx 1.0017\text{,}\) and this means that you are really gaining 0.17% interest per month.</p>
+<figure class="figure-like" id="tab_0_2_ex2"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Year</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Value</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines">$102.02</td>
+<td class="l m b0 r0 l0 t0 lines">$104.08</td>
+<td class="l m b0 r0 l0 t0 lines">$106.18</td>
+<td class="l m b0 r0 l0 t0 lines">$ 108.32</td>
+<td class="l m b0 r0 l0 t0 lines">$ 110.51</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.2.6</span>Value of $100 investment for the first 5 years</figcaption></figure><p id="p-192">Assume that our investor was an 18 year old and extrapolate this to retirement age, let's say 65 years old. That is 47 years worth of interest, and the initial $100 investment becomes</p>
+\begin{equation*}
+A(47) = 100 \left( 1 + \frac{0.02}{12} \right)^{12\cdot 47} \approx \$256.
+\end{equation*}
+<p id="p-193">If the number of times the bank compounds the interest changes the function will still have essentially the same form: \(A(t) = 100 (1+\frac{0.02}{n})^{nt}\text{.}\) In the next table below the same investment is considered for several values of \(n\text{.}\) While more compoundings per year generally gives a higher rate of return on the investment, the impact is small for larger values of \(n\text{.}\)</p>
+<figure class="figure-like" id="tab_0_2_ex2_n"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Year</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">47</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Value (\(n=1\))</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines">$102.00</td>
+<td class="l m b0 r0 l0 t0 lines">$104.04</td>
+<td class="l m b0 r0 l0 t0 lines">$106.12</td>
+<td class="l m b0 r0 l0 t0 lines">$ 108.24</td>
+<td class="l m b0 r0 l0 t0 lines">$ 110.41</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">$253.63</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Value (\(n=4\))</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines">$102.02</td>
+<td class="l m b0 r0 l0 t0 lines">$104.07</td>
+<td class="l m b0 r0 l0 t0 lines">$106.17</td>
+<td class="l m b0 r0 l0 t0 lines">$ 108.31</td>
+<td class="l m b0 r0 l0 t0 lines">$ 110.49</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">$255.40</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Value (\(n=12\))</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines">$102.02</td>
+<td class="l m b0 r0 l0 t0 lines">$104.08</td>
+<td class="l m b0 r0 l0 t0 lines">$106.18</td>
+<td class="l m b0 r0 l0 t0 lines">$ 108.32</td>
+<td class="l m b0 r0 l0 t0 lines">$ 110.51</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">$255.80</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Value (\(n=365\))</td>
+<td class="l m b0 r0 l0 t0 lines">$100</td>
+<td class="l m b0 r0 l0 t0 lines">$102.02</td>
+<td class="l m b0 r0 l0 t0 lines">$104.08</td>
+<td class="l m b0 r0 l0 t0 lines">$106.18</td>
+<td class="l m b0 r0 l0 t0 lines">$ 108.33</td>
+<td class="l m b0 r0 l0 t0 lines">$ 110.52</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">$255.99</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.2.7</span>Value of $100 investment for various values of \(n\text{.}\)</figcaption></figure>
+</p>
+</span></span>
+</div>
+
+</section>
+<section class="subsection" id="subsection-8"><header title="Subsection 1.2.3 Exponential Functions with Base \(e\)"><h1 class="heading hide-type" alt="Subsection 1.2.3 Exponential Functions with Base \(e\)">
+<span class="type">Subsection</span><span class="codenumber">0.2.3</span><span class="title">Exponential Functions with Base \(e\)</span>
+</h1></header><p id="p-194">Exponential functions are commonly written with a base of \(e \approx 2.718281828459045\dots\text{.}\) This may seem like an arbitrary and bizarre choice at first glance, but we will see that this famous number (called Euler's Number<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><span class="footnote"><sup> 1 </sup></span></a></span><span id="hk-fn-1" style="display: none;" class="tex2jax_ignore"><span class="footnote">Euler's number is named after the famous \(17^{th}\) century mathematician Leonhard Euler. Euler was the first mathematician to introduce the notion of a function, and he is responsible for a large amount of the development of Calculus.</span></span>) plays a central role in Calculus.</p>
+<p id="p-195">Euler's number can be derived from the equation
+\begin{equation*}
+    A(t) = A_0 \left( 1 + \frac{p}{n} \right)^{nt}
+\end{equation*}
+if we assume that a fictitious bank gives \(100\%\) interest compounded infinitely many times per year on a one dollar investment. Mathematically this is written as</p>
+\begin{gather*}
+e = 1 \cdot \left( 1 + \frac{1}{n} \right)^n \text{ as }  n \to \infty.
+\end{gather*}
+<figure class="figure-like" id="tab_0_2_euler"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(n\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(10\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(100\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1000\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(10^{10}\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\((1+\frac{1}{n})^n\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.5935\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.7048\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.7169\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2.71828\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\cdots\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.2.8</span>Approximations of Euler's number, \(e\text{,}\) with various values of \(n\)</figcaption></figure>
+
+<article class="assemblage-like" id="definition-2_d1">
+    <h5 class="heading">Exponential Functions with Euler's Number</h5>
+<p id="p-196">Any exponential function can be rewritten in terms of Euler's number in the form</p>
+\begin{gather*}
+f(x) = A_0 e^{kx}.
+\end{gather*}
+<p id="p-197">In this equation, \(k\) is called the <b>continuous rate</b>. </p>
+<ul id="ul-8" style="list-style-type: disc;">
+<li id="li-111"><p id="p-198">If \(k&gt;0\) then \(f(x) = A_0e^{kx}\) models exponential growth.</p></li>
+<li id="li-112"><p id="p-199">If \(k\lt 0\) then \(f(x) = A_0e^{kx}\) models exponential decay.</p></li>
+</ul>
+</article>
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-7" id="example-7"> -->
+<article class="example-like"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">0.2.9</span>
+</h5>
+
+
+<!-- <div id="hk-example-7" style="display: none;" class="tex2jax_ignore"><article class="example-like">-->
+<p id="p-200">A population of a city is 5000 people and is doubling in size every 5 years. Use the equations
+\begin{equation*}
+P(t) = A_0 r^{nt}
+\end{equation*}
+and
+\begin{equation*}
+    P(t) = A_0 e^{kt}
+\end{equation*}
+to write two different functions modeling this population; one with base 2 and one with base \(e\text{.}\)</p></article>
+
+    <!-- </div> -->
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-2_ex3" id="solution-2_ex3">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-2_ex3" style="display: none;" class="tex2jax_ignore">
+        <span class="solution"><p id="p-201">If the population is doubling every 5 years with an initial value of 5000
+            we know that </p>
+\begin{equation*}
+P(t) = 5000 \cdot 2^{t/5}.
+\end{equation*}
+<p id="p-202">In order to use an exponential function with base \(e\) we need to find the value of “\(k\)”. This is done by using the fact that at year 5 the population will be 10000 and solving the equation</p>
+\begin{equation*}
+10000 = 5000 \cdot e^{5k}.
+\end{equation*}
+<p id="p-203">Rearranging we see that \(e^{5k} = 2\text{.}\) In order to solve this algebraic equation we need to use logarithms. These important functions will be discussed in more detail in the logarithms section. In this case we see that \(k = \ln(2) / 5 \approx 0.139.\) Therefore,</p>
+\begin{equation*}
+P(t) = 5000 \cdot e^{0.139 t}.
+\end{equation*}
+<p id="p-204">Since these two equations model the same population they must be identical. Indeed,</p>
+\begin{equation*}
+5000 \cdot 2^{t/5} = 5000 \cdot \left( 2^{1/5} \right)^t \approx 5000 \cdot (1.149)^t,
+\end{equation*}
+<p>and</p>
+\begin{equation*}
+5000 \cdot e^{kt} = 5000 \cdot \left( e^k \right)^t \approx 5000 \cdot (1.149)^t.
+\end{equation*}
+
+    </p></span></span>
+</div>
+</section>
+
+
+<section class="subsection" id="subsection-9"><header title="Subsection 1.2.4 Summary"><h1 class="heading hide-type" alt="Subsection 1.2.4 Summary">
+<span class="type">Subsection</span><span class="codenumber">0.2.4</span><span class="title">Summary</span>
+</h1></header><ul id="ul-9" style="list-style-type: disc;">
+<li id="li-113">
+<p id="p-205">An exponential function can be written in the form \(f(x) = A r^{kx}\) or \(g(x) = A
+e^{kx}\text{.}\) </p>
+<ul id="ul-10" style="list-style-type: circle;">
+<li id="li-114"><p id="p-206">In \(f(x)\text{,}\) if \(k&gt;0\) and \(r&gt;1\) then \(f(x)\) models exponential growth.</p></li>
+<li id="li-115"><p id="p-207">In \(f(x)\text{,}\) if \(k&gt;0\) and \(0\lt r\lt 1\) then \(f(x)\) models exponential decay.</p></li>
+<li id="li-116"><p id="p-208">In \(g(x)\text{,}\) if \(k&gt;0\) then \(g(x)\) models exponential growth.</p></li>
+<li id="li-117"><p id="p-209">In \(g(x)\text{,}\) if \(k\lt 0\) then \(g(x)\) models exponential decay.</p></li>
+</ul>
+</li>
+<li id="li-118"><p id="p-210">Exponential functions have a constant common ratio for successive time values.</p></li>
+</ul>
+
+
+
+<section class="exercises" id="exercises-2"><header title="Exercises 1.2.5 Exercises"><h1 class="heading hide-type" alt="Exercises 1.2.5 Exercises">
+<span class="type">Subsubsection</span><span class="codenumber">0.2.5</span><span class="title">Exercises</span>
+</h1></header><article class="exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-211">Suppose that \(h(t) = A \cdot r^t\text{.}\) If \(h(3)=4\) and \(h(5)=40\text{,}\) </p>
+<ol id="ol-28" style="list-style-type: lower-alpha;">
+<li id="li-119"><p id="p-212">find \(r\text{.}\)</p></li>
+<li id="li-120"><p id="p-213">find \(A\text{.}\)</p></li>
+<li id="li-121"><p id="p-214">Does this function model exponential growth or decay? How can you tell?</p></li>
+</ol></article><article class="exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-215">The half-life of \(Br^{77}\) is 57 hours. </p>
+<ol id="ol-29" style="list-style-type: lower-alpha;">
+<li id="li-122"><p id="p-216">If the initial amount is \(150\) grams, find the amount remaining after 171 hours.</p></li>
+<li id="li-123"><p id="p-217">Write an equation to predict the amount remaining after \(t\) hours.</p></li>
+<li id="li-124"><p id="p-218">Estimate within one hour how long it will take the amount to decrease to 10 grams.</p></li>
+</ol></article><article class="exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-219">Consider the data in <a knowl="./knowl/tab_0_2_exercise3.html" knowl-id="xref-tab_0_2_exercise3" alt="Table 1.2.10 " title="Table 1.2.10 ">Table 10</a> </p>
+<ol id="ol-30" style="list-style-type: lower-alpha;">
+<li id="li-125"><p id="p-220">Which (if any) of the functions could be linear? Explain how you know that these functions are linear, and find formulas for these functions.</p></li>
+<li id="li-126"><p id="p-221">Which (if any) of the functions could be exponential? Explain how you know that these functions are exponential, and find formulas for these functions.</p></li>
+</ol>
+<figure class="figure-like" id="tab_0_2_exercise3"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(x\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(f(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(g(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(h(x)\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(-2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(12\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(16\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(37\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(-1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(17\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(24\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(34\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(20\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(36\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(31\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(21\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(54\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(28\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(18\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(81\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(25\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.2.10</span>Data tables for \(f(x)\text{,}\) \(g(x)\text{,}\) and \(h(x)\)</figcaption></figure></article></section></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-15T13:52:29-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transformations, Compositions, and Inverses</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\titlecolor{#1}
+\def\scl{0.8}
+\def\titlebackground{#1}
+\def\scl{0.9}
+\def\background{#1}
+\def\scl{0.7}
+\def\titleboxcolor{#1}
+\def\boxcolor{#1}
+\def\thcounter{#1}
+\def\size{#1}
+\newcommand{\titre}{Titre}
+\renewcommand{\titre}{#2}
+\renewcommand{\theacti}{\thechapter.\arabic{acti}}
+\newcommand{\saveCount}{\setcounter{lastenum}{\value{enumi}}}
+\newcommand{\restoreCount}{\setcounter{enumi}{\value{lastenum}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bei}{\begin{numlist2}}
+\newcommand{\eei}{\end{numlist2}}
+\newcommand{\ba}{\begin{enumerate}}
+\newcommand{\ea}{\end{enumerate}}
+\newcommand{\bal}{\begin{alphalist2}}
+\newcommand{\eal}{\end{alphalist2}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\btl}{\begin{thmlist}}
+\newcommand{\etl}{\end{thmlist}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bolda}{\boldsymbol{a}}
+\newcommand{\boldx}{\boldsymbol{x}}
+\newcommand{\boldy}{\boldsymbol{y}}
+\newcommand{\boldb}{\boldsymbol{b}}
+\newcommand{\boldv}{\boldsymbol{v}}
+\newcommand{\boldu}{\boldsymbol{u}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\by}{\boldsymbol{y}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bd}{\boldsymbol{d}}
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
+\newcommand{\afterex}{\begin{center}\underline{}\end{center}}
+\newcommand{\afterexercises}{\nin \vfill \ }
+\newcommand{\nin}{}
+\newcommand{\tr}{\vspace{0.5in}}
+\newcommand{\lr}{\vspace{1.0in}}
+\newcommand{\mr}{\vspace{2.0in}}
+\newcommand{\br}{\vspace{3.0in}}
+\newcommand{\afterpa}{\hfill $\bowtie$}
+\newcommand{\aftera}{\hfill $\lhd$}
+\newcommand{\T}{}
+\newcommand{\B}{\rule[-1.2ex]{0pt}{0pt}}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\solution}{\textbf{Solution.}}
+\newcommand{\myunit}{1 cm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Active Calculus: Matt Boelkins (Lead Author), Eric Sullivan (Local Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_0_2_Exponentials.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_0_4_Logarithms.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_0_2_Exponentials.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_0_4_Logarithms.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link active"><a href="C_0.html" data-scroll="C_0"><span class="codenumber">0</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="S_0_1_Functions.html" data-scroll="S_0_1_Functions">Lines, Slope, and Functions</a></li>
+<li><a href="S_0_2_Exponentials.html" data-scroll="S_0_2_Exponentials">Exponential Functions</a></li>
+<li><a href="S_0_3_Transformations.html" data-scroll="S_0_3_Transformations" class="active">Transformations, Compositions, and Inverses</a></li>
+<li><a href="S_0_4_Logarithms.html" data-scroll="S_0_4_Logarithms">Logarithmic Functions</a></li>
+<li><a href="S_0_5_TrigFunctions.html" data-scroll="S_0_5_TrigFunctions">Trigonometric Functions</a></li>
+<li><a href="S_0_6_PowersPolysRationals.html" data-scroll="S_0_6_PowersPolysRationals">Powers, Polynomials, and Rational Functions</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_0_3_Transformations"><header title="Section 1.3 Transformations, Compositions, and Inverses"><h1 class="heading hide-type" alt="Section 1.3 Transformations, Compositions, and Inverses">
+<span class="type">Section</span><span class="codenumber">0.3</span><span class="title">Transformations, Compositions, and Inverses</span><a href="S_0_3_Transformations.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-3"><article class="objectives" id="objectives-3"><h5 class="heading"><span class="type">Objectives</span></h5>
+<ul id="ul-11" style="list-style-type: disc;">
+<li id="li-127"><p id="p-222">How can new functions be generated by shifts, stretches, and transformations of well-known functions?</p></li>
+<li id="li-128"><p id="p-223">How can we mathematically describe symmetric functions?</p></li>
+<li id="li-129"><p id="p-224">How can we build inverse functions, and when do those functions exist?</p></li>
+</ul></article><p id="p-225">There are infinitely many functions that can be generated using the basic mathematical operations (addition, subtraction, multiplication, division, and exponentiation) along with <!--Style me with CSS--><em>simple</em> functions such as roots, exponentials, and trigonometric functions. In fact, we can build entire families of functions based only on these simple building blocks.</p>
+<article class="example-like" id="PA_0_3"><h5 class="heading">
+<span class="type">Preview Activity</span><span class="codenumber">0.3.1</span>
+</h5>
+<p id="p-226">The goal of this activity is to explore and experiment with the function</p>
+\begin{equation*}
+F(x) = Af(B(x-C))+D.
+\end{equation*}
+<p id="p-227">The values of \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\) are constants and the function \(f(x)\) will be henceforth called the <em class="terminology">parent function</em>. To facilitate this exploration, use the applet located at</p>
+<p id="p-228"><a class="external-url" href="http://www.geogebratube.org/student/m93018" target="_blank">http://www.geogebratube.org/student/m93018</a>. </p>
+<ol id="ol-31" style="list-style-type: lower-alpha;">
+<li id="li-130"><p id="p-229">Let's start with a simple parent function: \(f(x) = x^2\text{.}\)</p></li>
+<li id="li-131"><p id="p-230">Fix \(B=1\text{,}\) \(C=0\text{,}\) and \(D=0\text{.}\)  Write a sentence or two describing the action of \(A\) on the function \(F(x)\text{.}\)</p></li>
+<li id="li-132"><p id="p-231">Fix \(A=1\text{,}\) \(B=1\text{,}\) and \(D=0\text{.}\)  Write a sentence of two describing the action of \(C\) on the function \(F(x)\text{.}\)</p></li>
+<li id="li-133"><p id="p-232">Fix \(A=1\text{,}\) \(B=1\text{,}\) and \(C=0\text{.}\)  Write a sentence of two describing the action of \(D\) on the function \(F(x)\text{.}\)</p></li>
+<li id="li-134"><p id="p-233">Fix \(A=1\text{,}\) \(C=0\text{,}\) and \(D=0\text{.}\)  Write a sentence of two describing the action of \(B\) on the function \(F(x)\text{.}\)</p></li>
+<li id="li-135"><p id="p-234">In part (a) you have made conjectures about what \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\) do to a parent function graphically.  Test your conjectures with the functions \(f(x) =
+|x|\) (typed <tt class="code-inline tex2jax_ignore">abs(x)</tt>), \(f(x) = x^3\text{,}\) \(f(x) = \sin(x)\text{,}\) \(f(x) = e^x\) (typed <tt class="code-inline tex2jax_ignore">exp(x)</tt>), and any other function you find interesting.</p></li>
+</ol></article></section><section class="subsection" id="subsection-10"><header title="Subsection 1.3.1 Function Transformations"><h1 class="heading hide-type" alt="Subsection 1.3.1 Function Transformations">
+<span class="type">Subsection</span><span class="codenumber">0.3.1</span><span class="title">Function Transformations</span>
+</h1></header><p id="p-235">In <a knowl="./knowl/PA_0_3.html" knowl-id="xref-PA_0_3" alt="Preview Activity 1.3.1 " title="Preview Activity 1.3.1 ">Preview Activity 1</a> we experimented with the four main types of function transformations. You no doubt noticed that the values of \(C\) and \(D\) <!--Style me with CSS--><em>shift</em> the parent function and the values of \(A\) and \(B\) <!--Style me with CSS--><em>stretch</em> the parent function. 
+
+<article class="assemblage-like" id="definition-1">
+    <h5 class="heading">Function Transformations</h5>
+If \(f(x)\) is a parent function and</p>
+\begin{equation*}
+F(x) = Af(B(x-C))+D
+\end{equation*}
+<p>then the actions of each parameter are described in the table below. </p>
+<figure class="figure-like" id="tab_0_3_trans"><table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Parameter</td>
+<td class="l m b0 r0 l0 t0 lines">Action</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(A\)</td>
+<td class="l m b0 r0 l0 t0 lines">Stretch the parent function vertically</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(B\)</td>
+<td class="l m b0 r0 l0 t0 lines">Stretch the parent function horizontally</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(C\)</td>
+<td class="l m b0 r0 l0 t0 lines">Shift the parent function horizontally</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">\(D\)</td>
+<td class="l m b0 r0 l0 t0 lines">Shift the parent function vertically</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="heading">Table</span><span class="codenumber">0.3.1</span>Actions of stretch- and shift-type transformations</figcaption></figure>
+</p>
+</article>
+
+
+
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-8" id="example-8"> -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.3.2</span>
+    </h5>
+<p id="p-236">Consider the function \(f(x)\) in the left-hand plot of the figure below. Plot the functions \(g(x) = 2f(x)\text{,}\) \(j(x) = f(2x)\text{,}\) \(h(x) = f(x)+1\text{,}\) and \(k(x) = f(x-1)\text{.}\)</p>
+<figure class="figure-like" id="F_0_3_Ex1"><object type="image/svg+xml" style="width:95%; margin:auto; display:block;" data="images/0-3-fig1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.3.3</span>A function with transformations.</figcaption></figure>
+</article>
+    <!-- </a></div> -->
+<!-- <div id="hk-example-8" style="display: none;" class="tex2jax_ignore"><article class="example-like">
+-->
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3_ex1" id="solution-3_ex1">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-3_ex1" style="display: none;" class="tex2jax_ignore">
+        <span class="solution"><p id="p-20">
+
+
+<p id="p-237">You should notice the following features of these solutions: </p>
+<ul id="ul-12" style="list-style-type: disc;">
+<li id="li-136"><p id="p-238">In \(g(x)=2f(x)\text{,}\) the “2” simply doubled all of the \(y\)-values from \(f(x)\text{.}\)</p></li>
+<li id="li-137"><p id="p-239">In \(j(x)=f(2x)\text{,}\) the “2” actually cut all of the \(x\)-values in half from \(f(x)\text{.}\) This is potentially contrary to what you might expect. Verify this by substituting values in for \(x\text{.}\)</p></li>
+<li id="li-138"><p id="p-240">In \(h(x)=f(x)+1\text{,}\) the “\(+1\)” simply adds 1 unit to all of the \(y\)-values from \(f(x)\text{.}\)</p></li>
+<li id="li-139"><p id="p-241">In \(k(x)=f(x-1)\text{,}\) the “\(-1\)” actually moves the graph of \(f(x)\) to the right. This is potentially contrary to what you might expect. Verify this by substituting values in for \(x\text{.}\)</p></li>
+</ul>
+    </p></span></span>
+</div>
+
+
+<article class="example-like" id="A_0_3_1"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.3.2</span>
+</h5>
+
+      <p>
+        Consider the function \(f(x)\) displayed in the figure below.
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              Plot \(g(x) = -f(x)\) and \(h(x) = f(x)-1\).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Define the function \(k(x) = -f(x)-1\).  Does it matter which order you
+              complete the tranformations from part (a) to result in \(k(x)\)?  Plot the
+              functions resulting from doing the two transformation in part (a) in opposite
+              orders.  Which of these functions is \(k(x)\)?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <figure>
+            <img src="images/0-3-fig2.svg" width="99%">
+      </figure>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_3_1" id="hint-act_3_1"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_3_1" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                Think of the <q>\(-\)</q> in front of \(f(x)\) as a \(-1\).  What is the difference
+                between multiplying by \(-1\) and adding \(-1\)?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Think about the order of mathematical operations.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_3_1" id="solution-act_3_1"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_3_1" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              The function \(g(x)\) should change the sign on all of the \(y\) values of \(f\).
+              The function \(h(x)\) will shift all of the \(y\) values of \(f\) down 1 unit.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The order in which you do the transformations does matter.  In this problem
+              the order of operations should be to change the sign on the \(y\) value and then
+              to shift 1 unit down.
+            </p>
+          </li>
+        </ol>
+        <p>
+        <figure>
+          <img src="images/0-3-fig2soln.svg" width="99%">
+        </figure>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+
+</section><section class="subsection" id="subsection-11"><header title="Subsection 1.3.2 Composition of Functions"><h1 class="heading hide-type" alt="Subsection 1.3.2 Composition of Functions">
+<span class="type">Subsection</span><span class="codenumber">0.3.2</span><span class="title">Composition of Functions</span>
+</h1></header><p id="p-251">When multiple transformations are applied in sequence, like in the previous activity, the resulting function is actually the composition of function transformations. The concept of a composition encompasses more than just transformations though. If \(f(x)\) and \(g(x)\) are functions where the range of \(g(x)\) is a subset of the domain of \(f(x)\) we can form a new function \(h(x) = f(g(x))\text{.}\) This literally means that you are substituting \(g(x)\) in for
+every instance of the variable \(x\) in \(f(x)\text{.}\) For example, if \(f(x) = x^2\) and \(g(x) = \sin(x)\) then \(h(x) = f(g(x)) = \left( \sin(x) \right)^2\) and \(k(x) = g(f(x)) =
+\sin(x^2)\text{.}\)</p>
+
+
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-9" id="example-9">-->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.3.5</span>
+    </h5>
+    <p id="p-252">If \(f(x) = x^2\) and \(g(x) = x-1\) then find \(f(g(3))\text{,}\) \(g(f(3))\text{,}\) \(f(g(x))\text{,}\) and \(g(f(x))\text{.}\)</p>
+</article>
+<!-- <div id="hk-example-9" style="display: none;" class="tex2jax_ignore"><article class="example-like"></article></div>-->
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3_ex2" id="solution-3_ex2">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-3_ex2" style="display: none;" class="tex2jax_ignore">
+        <span class="solution">
+            Text for solution
+            </p>
+<p id="p-253">To evaluate \(f(g(3))\) we consider that \(g(3) = 2\) and \(g(2) = 4\text{.}\) Therefore, \(f(g(3))=4\text{.}\) Similarly, \(g(f(3)) = g(9) = 8\text{.}\) The function compositions \(f(g(x))\) and \(g(f(x))\) are \(f(g(x)) = (x-1)^2\) and \(g(f(x))=x^2 - 1\text{.}\) Notice the difference between these resulting functions; the order that the composition takes places matters!</p>
+            </p></span></span>
+</div>
+
+<article class="example-like" id="A_0_3_2"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.3.3</span>
+</h5>
+
+
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            Let \(f(x) = x^2\) and \(g(x) = x+8\).  Find the following:
+            \begin{equation*}
+            f(g(3)) = \underline{\hspace{1in}}, \quad  g(f(3)) =
+              \underline{\hspace{1in}}, \quad f(g(x)) = \underline{\hspace{1in}},
+            \end{equation*}
+            \begin{equation*}
+              g(f(x)) = \underline{\hspace{1in}}, \quad f(x)g(x) = \underline{\hspace{1in}}
+            \end{equation*}
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Now let \(f(x)\) and \(g(x)\) be defined as in the table below.  Use the data in
+            the table to find the following compositions.
+            <center>
+            <table border="1">
+                <tr>
+                    <td>\( x \) </td>
+                    <td>−3 </td>
+                    <td>−2 </td>
+                    <td>−1 </td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>\(f(x)\) </td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>−1 </td>
+                    <td>−3 </td>
+                    <td>−1 </td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>\( g(x) \) </td>
+                    <td>−2 </td>
+                    <td>−1 </td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </table>
+            </center>
+            \begin{equation*}
+            f(-3) = \underline{\hspace{1in}}, \quad
+              g(3) = \underline{\hspace{1in}},
+            \end{equation*}
+            \begin{equation*}
+              f(g(-3)) = \underline{\hspace{1in}}, \quad
+              f(g(f(-3))) = \underline{\hspace{1in}}
+            \end{equation*}
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Now let \(f(x)\) and \(g(x)\) be defined as in the plots below.  Use the plots
+            to find the following compositions.
+
+            <figure>
+              <img src="images/0-3-fig3.svg" width="70%">
+            </figure>
+            \begin{equation*}
+            f(1) = \underline{\hspace{1in}}, \quad g(2) = \underline{\hspace{1in}}, \quad g(f(1)) = \underline{\hspace{1in}}
+            \end{equation*}
+            \begin{equation*}
+            f(g(1)) = \underline{\hspace{1in}}, \quad g(f(f(0))) = \underline{\hspace{1in}}
+            \end{equation*}
+          </p>
+        </li>
+      </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_3_2" id="hint-act_3_2"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_3_2" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                Start from the inside and work your way out.  The first two answers will be
+                numbers and the next three will be functions.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The numbers on the inside of the table are the \(y\) values for the functions
+                \(f\) and \(g\).
+              </p>
+            </li>
+
+            <li>
+              <p>
+                You're looking for the \(y\) values that come out of these functions.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_3_2" id="solution-act_3_2"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_3_2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                For \(f(x) = x^2\) and \(g(x) = x+8\)
+\begin{equation*}
+  f(g(3)) = f(11) = 121, \quad g(f(3)) = g(9) = 17,
+  \end{equation*}
+  \begin{equation*}
+  f(g(x)) = f(x+8) = (x+8)^2, \quad g(f(x)) = g(x^2) = x^2 + 8,
+  \end{equation*}
+  \begin{equation*}
+  f(x)g(x) =(x^2)(x+8) = x^3 + 8x^2
+  \end{equation*}
+              </p>
+            </li>
+
+            <li> From the table we have
+              <p>
+              \begin{equation*}
+                  f(-3) = 3, \quad
+                  g(3) = 2, \quad
+                  f(g(-3)) = f(-2) = 1,
+                  \end{equation*}
+                  \begin{equation*}
+                  f(g(f(-3))) = f(g(3)) = f(2) = 1
+                  \end{equation*}
+              </p>
+            </li>
+
+            <li>
+              <p>
+              \begin{equation*}
+                  f(1) = 1, \quad
+                  g(2) = 1, \quad
+                  g(f(1)) = g(1) = -1
+                \end{equation*}
+                \begin{equation*}
+                  f(g(1)) = f(-1) = -2, \quad
+                  g(f(f(0))) = g(f(-2)) = g(1) = 1
+                  \end{equation*}
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+</section><section class="subsection" id="subsection-12"><header title="Subsection 1.3.3 Symmetry"><h1 class="heading hide-type" alt="Subsection 1.3.3 Symmetry">
+<span class="type">Subsection</span><span class="codenumber">0.3.3</span><span class="title">Symmetry</span>
+</h1></header><p id="p-265">There are many ways that a function can be symmetric, but two important symmetries are (1) reflective symmetry over the \(y\)-axis, and (2) \(180^\circ\) rotational symmetry about the origin.</p>
+
+<article class="assemblage-like" id="definition-3_1">
+    <h5 class="heading">Even Functions</h5>
+<!-- <article class="definition-like" id="definition-7"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">0.3.6</span><span class="title">even function</span>
+</h5>-->
+<p id="p-266">A function that has reflective symmetry over the \(y\)-axis is called an even function.</p>
+</article>
+<article class="assemblage-like" id="definition-3_2">
+    <h5 class="heading">Odd Functions</h5>
+<!-- <article class="definition-like" id="definition-8"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">0.3.7</span><span class="title">odd function</span>
+</h5>-->
+<p id="p-267">A function with rotational symmetry about the origin is called an odd function.</p>
+</article>
+<p id="p-268">The reasoning for these names will be evident after completing the next activity.</p>
+
+
+<article class="example-like" id="A_0_3_3"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.3.4</span>
+</h5>
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            Based on symmetry alone, is \(f(x) = x^2\) an even or an odd function?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Based on symmetry alone, is \(g(x) = x^3\) an even or an odd function?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Find \(f(-x)\) and \(g(-x)\) and make conjectures to complete these sentences:
+            <ul>
+              <li>
+                <p>
+                  If a function \(f(x)\) is <em>even</em> then \(f(-x) =\)<fillin />.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  If a function \(f(x)\) is <em>odd</em> then \(f(-x) =\)<fillin />.
+                </p>
+              </li>
+            </ul>
+          </p>
+
+          Explain why the composition \(f(-x)\) is a good test for symmetry of a function.</li>
+
+        <li>
+          <p>
+            Classify each of the following functions as even, odd, or neither.
+            \begin{equation*}
+              h(x) = \frac{1}{x}, \quad  j(x) = e^x, \quad  k(x) = x^2-x^4, \quad  n(x) =
+              x^3+x^2.
+            \end{equation*}
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Each figure below shows only half of the function.  Draw the left
+            half so \(f(x)\) is even.  Draw the left half so \(g(x)\) is odd. Draw the left
+            half so \(h(x)\) is neither even nor odd.
+            <figure>
+                <img src="images/0-3-fig4.svg" width="99%">
+            </figure>
+          </p>
+        </li>
+      </ol>
+</article>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_3_3" id="hint-act_3_3"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_3_3" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                Draw a plot of the function.  Is there reflective symmetry or rotational
+                symmetry?
+              </p>
+            </li>
+            <li>
+              <p>
+                Draw a plot of the function.  Is there reflective symmetry or rotational
+                symmetry?
+              </p>
+            </li>
+            <li>
+              <p>
+                Put \(-x\) into the function and see what results.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the test that you devised in part (c)
+              </p>
+            </li>
+            <li>
+              <p>
+                Think about how to use to the test from part (c) graphically.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_3_3" id="solution-act_3_3"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_3_3" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                \(f(x)=x^2\) is an even function.  If you reflect of the \(y\) axis you get a
+                perfect match.
+              </p>
+            </li>
+            <li>
+              <p>
+                \(g(x) = x^3\) is an odd function.  If you rotate about the origin you get a
+                perfect match.
+              </p>
+            </li>
+            <li>
+              <p>
+                If \(f(x)\) is even then \(f(-x) = f(x)\).  If \(f(x)\) is odd then \(f(-x) =
+                -f(x)\).
+              </p>
+            </li>
+            <li> Here we will use the test from part (3).
+              <p>
+                \begin{equation*}
+                  h(-x) = \frac{1}{(-x)} = -\frac{1}{x} = -h(x)  \implies 
+                  h(x) \text{ is odd }
+                \end{equation*}
+                \begin{equation*}
+                  j(-x) = e^{-x} = \frac{1}{e^x}  \implies 
+                  j(x) \text{ is neither even nor odd }
+                \end{equation*}
+                \begin{equation*}
+                  k(-x) = (-x)^2 - (-x)^4 = x^2 - x^4 = k(x)  \implies 
+                  k(x) \text{ is even }
+                \end{equation*}
+                \begin{equation*}
+                  n(-x) = (-x)^3 + (-x)^2 = -x^3 + x^2  \implies 
+                  n(x) \text{ is neither even nor odd }
+                \end{equation*}
+              </p>
+            </li>
+            <li>
+              <p>
+                See the plot below for the answers to the left and middle plots.  The
+                right-hand plot can be anything other than the first two.
+                <figure>
+                    <img src="images/0-3-fig4soln.svg", width="99%">
+                </figure>
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+<article class="assemblage-like" id="definition-3_4">
+    <h5 class="heading">Test for Even and Odd Functions</h5>
+<p>
+<ul>
+    <li>A function \(f(x)\) is called <b>even</b> if and only if \( f(-x) = f(x) \) </li>
+    <li>A function \(f(x)\) is called <b>odd</b> if and only if \( f(-x) = -f(x) \) </li>
+</ul></p>
+</article>
+
+
+
+
+</section><section class="subsection" id="subsection-13"><header title="Subsection 1.3.4 Inverse Functions"><h1 class="heading hide-type" alt="Subsection 1.3.4 Inverse Functions">
+<span class="type">Subsection</span><span class="codenumber">0.3.4</span><span class="title">Inverse Functions</span>
+</h1></header><p id="p-288">We conclude this section by discussing an important question: If we know the action of a function is it possible to undo that action? This question can be rephrased by saying: If we know the output of a function can we tell exactly what the input was? The answer to these questions is that it depends on the type of function.</p>
+<p id="p-289">Consider, for example, the function \(f(x) = x^2\text{.}\) If we know that \(f(a) = 4\) do we the value of \(a\text{?}\) Of course not! It is obvious that \(f(2) = f(-2) = 4\text{,}\) so just by knowing the output of the function \(f(x) = x^2\) we cannot invert the function and find the input. What about the function \(g(x) = x^3\text{?}\) If we know that \(g(b) = 8\) then there is only one unique value of \(b\text{,}\) \(b=2\text{,}\) such that \(g(b) = 8\text{.}\) Therefore it seems like we can invert the cubic function.</p>
+<p id="p-290">The act of <!--Style me with CSS--><em>reversing the action of a function</em> can be explored geometrically. Indeed, in <a knowl="./knowl/fig_0_3_inv.html" knowl-id="xref-fig_0_3_inv" alt="Figure 1.3.8 " title="Figure 1.3.8 ">Figure 8</a> we see that if we can simply switch the values of \(x\) and \(y\) we will get a plot that shows how to undo the action of a function. Geometrically, switching the role of the \(x\) and the \(y\) in the function is the same as reflecting over the line \(y=x\text{.}\)</p>
+<figure class="figure-like" id="fig_0_3_inv"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/0-3-fig5.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.3.8</span>Inverse functions. If \((x,y)\) is on one end of one of the dashed segments, then \((y,x)\) is on the other side.</figcaption></figure><p id="p-291">The question that remains is when an inverse function actually exists. This is the same as asking: “if I reflect over \(y=x\) is the end result a function?” The answer to this question is certainly “no” if the function is \(f(x) = x^2\) (as seen in the left-hand plot of <a knowl="./knowl/fig_0_3_inv2.html" knowl-id="xref-fig_0_3_inv2" alt="Figure 1.3.9 " title="Figure 1.3.9 ">Figure 9</a>), but if we restrict the domain on \(f(x) = x^2\) to \(0 \le x \lt  \infty\) then the result is a function (as seen in the right-hand plot of <a knowl="./knowl/fig_0_3_inv2.html" knowl-id="xref-fig_0_3_inv2" alt="Figure 1.3.9 " title="Figure 1.3.9 ">Figure 9</a>). This leads us to the following results. </p>
+
+<article class="assemblage-like" id="definition-3_5">
+    <h5 class="heading">Horizontal Line Test</h5>
+<p id="p-292">If a horizontal line passes through a function only once, then it has a unique inverse found by interchanging the \(x\) and the \(y\text{.}\)</p>
+</article>
+
+<article class="assemblage-like" id="definition-3_5">
+    <h5 class="heading">Inverses via Reflection</h5>
+<p id="p-293">The inverse of a function can be found geometrically by reflecting the graph of the function over the line \(y=x\text{.}\)</p>
+</article>
+
+<figure class="figure-like" id="fig_0_3_inv2"><object type="image/svg+xml" style="width:90%; margin:auto; display:block;" data="images/0-3-fig6.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.3.9</span>The left-hand plot shows that after reflecting \(f(x)=x^2\) across \(y=x\) the result is not a function.  The right-hand plot shows that under a restriction of the domain the result can be a function.</figcaption></figure>
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-10" id="example-10"> -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.3.10</span>
+</h5>
+<p id="p-294">Find the inverse of the following functions. If necessary, restrict the domain on the function so that the inverse exists. </p>
+<ol id="ol-41" style="list-style-type: lower-alpha;">
+<li id="li-174"><p id="p-295">\(f(x) = x^2+1\)</p></li>
+<li id="li-175"><p id="p-296">\(g(x) = ax+b\)</p></li>
+<li id="li-176"><p id="p-297">\(h(x) = (2x+8)^3\)</p></li>
+</ol>
+</article>
+<!-- <div id="hk-example-10" style="display: none;" class="tex2jax_ignore"><article class="example-like"></article></div>-->
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-3_ex3" id="solution-3_ex3">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-3_ex3" style="display: none;" class="tex2jax_ignore">
+        <span class="solution"><p id="p-20">
+<ol id="ol-42" style="list-style-type: lower-alpha;">
+<li id="li-177">
+<p id="p-298">To find the inverse of \(f(x)\) we first interchange the \(x\) and \(y\text{.}\)  Then we solve for \(y\text{.}\)  That is:</p>
+\begin{equation*}
+\text{ Solve for \(y\): }  x = y^2+1  \implies  y = \pm\sqrt{x-1}.
+\end{equation*}
+<p>Obviously the resulting solution is two equations.  By convention we choose the positive square root and note that the inverse only makes sense if \(x\ge 1\text{.}\) Hence, in order for the inverse to make sense we need a restriction on the domain of \(f(x)\text{:}\) If \(0 \le x \lt  \infty\) then any horizontal line only crosses the  graph of \(f(x)\) once, and hence the inverse exists and is unique.</p>
+\begin{equation*}
+f^{-1}(x) = \sqrt{x-1},  x \ge 1
+\end{equation*}
+</li>
+<li id="li-178">
+<p id="p-299">Interchanging the \(x\) and \(y\) in this equation gives</p>
+\begin{equation*}
+\text{ Solve for \(y\): }  x = ay+b  \implies  y = \frac{x-b}{a}.
+\end{equation*}
+<p>There is no need to restrict the domain of \(g(x)\) in this instance since the resulting equation is a function.</p>
+\begin{equation*}
+g^{-1}(x) = \frac{x-b}{a} = \frac{1}{a} x - \frac{b}{a}
+\end{equation*}
+</li>
+<li id="li-179">
+<p id="p-300">Interchanging the \(x\) and \(y\) in this equation gives</p>
+\begin{equation*}
+\text{ Solve for \(y\): }  x = (2y+8)^3  \implies  y = \frac{x^{1/3}-8}{2}.
+\end{equation*}
+<p>In this instance there is no restriction on the domain of \(h(x)\) since (as in part (b)) the resulting equation is a function.</p>
+\begin{equation*}
+h^{-1}(x) = \frac{x^{1/3}-8}{2}
+\end{equation*}
+</li>
+</ol>
+        </span></span>
+</div>
+
+<p id="p-301">Finally, to tie the ideas of composition and inverses together we observe that if the inverse of a function switches the roles of \(x\) and \(y\) then the composition \(f^{-1}(f(x))\) should simply give \(x\) back. The logical argument is as follows:</p>
+\begin{equation*}
+f \text{ maps }  x \text{ to }  y  \text{ then }   f^{-1} \text{ maps }  y \text{ to } 
+x
+\end{equation*}
+<p id="p-302">That is,</p>
+\begin{equation*}
+f^{-1}(f(x)) = x.
+\end{equation*}
+<p id="p-303">Similarly,</p>
+\begin{equation*}
+f^{-1} \text{ maps }  x \text{ to }  y  \text{ then }   f \text{ maps }  y \text{ to } 
+x
+\end{equation*}
+<p>which is written more compactly as</p>
+\begin{equation*}
+f(f^{-1}(x)) = x.
+\end{equation*}
+<p id="p-304">These two equations provide a nice algebraic check when finding inverses.</p>
+
+
+<article class="assemblage-like" id="definition-1">
+    <h5 class="heading">Checking Inverse Functions</h5>
+    <p>
+    If \(f(x)\) has an inverse \(f^{-1}(x)\) then
+    \begin{equation*}
+        f(f^{-1}(x)) = x \quad \text{and} \quad f^{-1}(f(x)) = x
+    \end{equation*}
+</article>
+
+<article class="example-like" id="A_0_3_4"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.3.5</span>
+</h5>
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            Find the inverse of each of the following functions by interchanging the \(x\) and \(y\)
+            and solving for \(y\).  Be sure to state the domain for each of your answers.
+            \begin{equation*}
+              y = \sqrt{x-1}, \quad  y = -\frac{1}{3} x + 1, \quad  y = \frac{x+4}{2x-5}
+            \end{equation*}
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Verify that the functions \(f(x) = 3x-2\) and \(g(x) = \frac{x}{3} +
+            \frac{2}{3}\) are inverses of each other by computing \(f(g(x))\) and \(g(f(x))\).
+          </p>
+        </li>
+      </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_3_4" id="hint-act_3_4"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_3_4" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                Switch the \(x\) and \(y\) and solve for \(y\).  It may also be helpful to draw a
+                picture.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                What should happen to \(f(g(x))\) and \(g(f(x))\) if \(f\) and \(g\) are inverses?
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_3_4" id="solution-act_3_4"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_3_4" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <ul>
+                <li>
+                  <p>
+                    For \(y=\sqrt{x-1}\): First switch the \(x\) and \(y\) to get \(x = \sqrt{y-1}\).
+                    Then if we square both sides and add 1 we get \(y = x^2 + 1\).  Notice
+                    graphically that the inverse function only makes sense for \(x \ge 0\).
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For \(y = -\frac{1}{3}x + 1\): First switch the \(x\) and \(y\) to get \(x =
+                    -\frac{1}{3}y + 1\).  Then if we subtract \(1\) and multiply by \(-3\) we get \(y =
+                    -3(x-1) = -3x+3\).  This linear function makes sense for all \(x\).
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    For \(y=\frac{x+4}{2x-5}\): First switch the \(x\) and \(y\) to get \(x =
+                    \frac{y+4}{2y-5}\).  Multiplying by the denominator gives \(x(2y-5) = y+4\), and
+                    then if we distribute the \(x\) we get \(2xy - 5x = y+4\).  Now we should gather
+                    all of the \(y\) terms on the same side to get \(2xy - y = 5x + 4\).  Factoring
+                    the \(y\) out from the left and dividing gives \(y = \frac{5x+4}{2x-1}\). This
+                    function makes sense for all \(x\) not equal to \(1/2\).
+                  </p>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p>
+                If we compose the two functions then
+                \begin{equation*}
+                  f(g(x)) = 3\left( \frac{x}{3} + \frac{2}{3} \right) -2  = x + 2 -2 = x.
+                \end{equation*}
+                \begin{equation*}
+                  g(f(x)) = \frac{1}{3} \left( 3x-2 \right) + \frac{2}{3} = x -
+                  \frac{2}{3} + \frac{2}{3} = x.
+                \end{equation*}
+                Since both \(f(g(x)) = x\) and \(g(f(x)) = x\) we know that \(f\) and \(g\) are
+                inverses of each other.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+</section><section class="subsection" id="subsection-14"><header title="Subsection 1.3.5 Summary"><h1 class="heading hide-type" alt="Subsection 0.3.5 Summary">
+<span class="type">Subsection</span><span class="codenumber">0.3.5</span><span class="title">Summary</span>
+</h1></header><ul id="ul-16" style="list-style-type: disc;">
+<li id="li-189"><p id="p-315">A function can be transformed by \(F(x) = Af(B(x-C))+D\) where \(C\) and \(D\) shift the function and \(A\) and \(B\) stretch the function.</p></li>
+<li id="li-190"><p id="p-316">If \(f(-x) = f(x)\) then \(f\) is an even function.</p></li>
+<li id="li-191"><p id="p-317">If \(f(-x) = -f(x)\) then \(f\) is an odd function.</p></li>
+<li id="li-192"><p id="p-318">To find the inverse of a function we switch the roles of the \(x\) and \(y\) variables. Geometrically this is the same as reflecting over the line \(y=x\text{.}\)  Occasionally it is essential to restrict the domain of the original function in order for the inverse to exist.</p></li>
+<li id="li-193">
+<p id="p-319">The composition of a function and its inverse is the original input:</p>
+\begin{equation*}
+f(f^{-1}(x)) = x  \text{ and }   f^{-1}(f(x)) = x.
+\end{equation*}
+</li>
+</ul>
+<section class="exercises" id="exercises-3"><header title="Exercises 0.3.6 Exercises"><h1 class="heading hide-type" alt="Exercises 0.3.6 Exercises">
+<span class="type">Subsubsection</span><span class="codenumber">0.3.6</span><span class="title">Exercises</span>
+</h1></header><article class="exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-320">The functions \(f(x)\) and \(g(x)\) are defined in the table below. Use these function values to answer the following questions.</p>
+<table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(x\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-3\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(3\)</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(f(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(3\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-3\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(3\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(g(x)\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-2\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(-1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(2\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<p id="p-321">(a) \(f(-3)\text{,}\) (b) \(g(3)\text{,}\) (c) \(f(g(-3))\text{,}\) (d) \(g(f(3))\text{,}\) (e) \(f(g(f(-3)))\)</p>
+<p id="p-322">(f) Write a list of value of \(f(-x)\) for \(x = -3, -2, \dots, 2, 3\text{.}\) Based on this list is \(f(x)\) an even function, an odd function, or neither?</p>
+<p id="p-323">(g) Repeat part (f) for \(g(x)\text{.}\)</p></article><article class="exercise-like" id="exercise-9"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-324">Find the inverse of each of the following functions. If necessary state a restriction on the domain of \(f(x)\) so that the inverse actually exists. </p>
+<ol id="ol-46" style="list-style-type: lower-alpha;">
+<li id="li-194"><p id="p-325">\(f(x) = (2x-3)^2\)</p></li>
+<li id="li-195"><p id="p-326">\(g(x) = x^2 - 2x + 1\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-10"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-327">The plot on the left shows the function \(f(x)\) and the plot on the right shows \(g(x)
+= Af(B(x-C))+D\text{.}\) Find the appropriate values of \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\text{.}\) <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/0-3-fig7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article><article class="exercise-like" id="exercise-11"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-328">Use the function below to plot</p>
+<p id="p-329">(a) \(f(x)-3\text{,}\) (b) \(f(x+1)\text{,}\) (c) \(\frac{1}{2}f(x)\text{,}\) (d) \(-f(x)\text{,}\) and (e) \(\frac{1}{f(x)}\text{.}\) <object type="image/svg+xml" style="width:70%; margin:auto; display:block;" data="images/0-3-fig8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article></section></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

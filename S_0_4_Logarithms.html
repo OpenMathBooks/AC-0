@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-15T13:52:29-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logarithmic Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\titlecolor{#1}
+\def\scl{0.8}
+\def\titlebackground{#1}
+\def\scl{0.9}
+\def\background{#1}
+\def\scl{0.7}
+\def\titleboxcolor{#1}
+\def\boxcolor{#1}
+\def\thcounter{#1}
+\def\size{#1}
+\newcommand{\titre}{Titre}
+\renewcommand{\titre}{#2}
+\renewcommand{\theacti}{\thechapter.\arabic{acti}}
+\newcommand{\saveCount}{\setcounter{lastenum}{\value{enumi}}}
+\newcommand{\restoreCount}{\setcounter{enumi}{\value{lastenum}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bei}{\begin{numlist2}}
+\newcommand{\eei}{\end{numlist2}}
+\newcommand{\ba}{\begin{enumerate}}
+\newcommand{\ea}{\end{enumerate}}
+\newcommand{\bal}{\begin{alphalist2}}
+\newcommand{\eal}{\end{alphalist2}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\btl}{\begin{thmlist}}
+\newcommand{\etl}{\end{thmlist}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bolda}{\boldsymbol{a}}
+\newcommand{\boldx}{\boldsymbol{x}}
+\newcommand{\boldy}{\boldsymbol{y}}
+\newcommand{\boldb}{\boldsymbol{b}}
+\newcommand{\boldv}{\boldsymbol{v}}
+\newcommand{\boldu}{\boldsymbol{u}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\by}{\boldsymbol{y}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bd}{\boldsymbol{d}}
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
+\newcommand{\afterex}{\begin{center}\underline{}\end{center}}
+\newcommand{\afterexercises}{\nin \vfill \ }
+\newcommand{\nin}{}
+\newcommand{\tr}{\vspace{0.5in}}
+\newcommand{\lr}{\vspace{1.0in}}
+\newcommand{\mr}{\vspace{2.0in}}
+\newcommand{\br}{\vspace{3.0in}}
+\newcommand{\afterpa}{\hfill $\bowtie$}
+\newcommand{\aftera}{\hfill $\lhd$}
+\newcommand{\T}{}
+\newcommand{\B}{\rule[-1.2ex]{0pt}{0pt}}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\solution}{\textbf{Solution.}}
+\newcommand{\myunit}{1 cm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Active Calculus: Matt Boelkins (Lead Author), Eric Sullivan (Local Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_0_3_Transformations.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_0_5_TrigFunctions.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_0_3_Transformations.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_0_5_TrigFunctions.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link active"><a href="C_0.html" data-scroll="C_0"><span class="codenumber">0</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="S_0_1_Functions.html" data-scroll="S_0_1_Functions">Lines, Slope, and Functions</a></li>
+<li><a href="S_0_2_Exponentials.html" data-scroll="S_0_2_Exponentials">Exponential Functions</a></li>
+<li><a href="S_0_3_Transformations.html" data-scroll="S_0_3_Transformations">Transformations, Compositions, and Inverses</a></li>
+<li><a href="S_0_4_Logarithms.html" data-scroll="S_0_4_Logarithms" class="active">Logarithmic Functions</a></li>
+<li><a href="S_0_5_TrigFunctions.html" data-scroll="S_0_5_TrigFunctions">Trigonometric Functions</a></li>
+<li><a href="S_0_6_PowersPolysRationals.html" data-scroll="S_0_6_PowersPolysRationals">Powers, Polynomials, and Rational Functions</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_0_4_Logarithms"><header title="Section 1.4 Logarithmic Functions"><h1 class="heading hide-type" alt="Section 1.4 Logarithmic Functions">
+<span class="type">Section</span><span class="codenumber">0.4</span><span class="title">Logarithmic Functions</span><a href="S_0_4_Logarithms.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-4"><article class="objectives" id="objectives-4"><h5 class="heading"><span class="type">Objectives</span></h5>
+<ul id="ul-17" style="list-style-type: disc;">
+<li id="li-196"><p id="p-330">How can we “undo” the effects of exponentiation?</p></li>
+<li id="li-197"><p id="p-331">How can we solve equations involving exponential and logarithmic expressions?</p></li>
+<li id="li-198"><p id="p-332">What are the properties of logarithmic functions?</p></li>
+</ul></article><p id="p-333">In <a href="S_0_2_Exponentials.html" alt="Section 1.2 Exponential Functions" title="Section 1.2 Exponential Functions">section 2</a> we studied exponential functions to model a variety of different settings. It is straightforward to verify that the graph of an exponential function passes the “horizontal line test” described in <a href="S_0_3_Transformations.html" alt="Section 1.3 Transformations, Compositions, and Inverses" title="Section 1.3 Transformations, Compositions, and Inverses">section 3</a>, and so we should expect exponential functions to have corresponding inverse functions. In this section we will define the <!--Style me with CSS--><em>logarithm</em> to be the inverse function for an exponential.</p>
+<article class="example-like" id="PA_0_4"><h5 class="heading">
+<span class="type">Preview Activity</span><span class="codenumber">0.4.1</span>
+</h5>
+<p id="p-334">Carbon-14 (\(^{14}\)C) is a radioactive isotope of carbon that occurs naturally in the Earth's atmosphere. During photosynthesis, plants take in \(^{14}\)C along with other carbon isotopes, and the levels of \(^{14}\)C in living plants are roughly the same as atmospheric levels. Once a plant dies, it no longer takes in any additional \(^{14}\)C. Since \(^{14}\)C in the dead plant decays at a predictable rate (the half-life of \(^{14}\)C is approximately 5,730 years), we can measure \(^{14}\)C levels in dead plant matter to get an estimate on how long ago the plant died. Suppose that a plant has 0.02 milligrams of \(^{14}\)C when it dies. </p>
+<ol id="ol-47" style="list-style-type: lower-alpha;">
+<li id="li-199"><p id="p-335">Write a function that represents the amount of \(^{14}\)C remaining in the plant after \(t\) years.</p></li>
+<li id="li-200"><p id="p-336">Complete the table for the amount of \(^{14}\)C remaining \(t\) years after the death of the plant. <table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">t</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+<td class="l m b0 r0 l0 t0 lines">1000</td>
+<td class="l m b0 r0 l0 t0 lines">2000</td>
+<td class="l m b0 r0 l0 t0 lines">5730</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(^{14}\)C Level</td>
+<td class="l m b0 r0 l0 t0 lines">0.02</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table></p></li>
+<li id="li-201"><p id="p-337">Suppose our plant died sometime in the past.  If we find that there are 0.014 milligrams of \(^{14}\)C present in the plant now, estimate the age of the plant to within 50 years.</p></li>
+</ol></article></section><section class="subsection" id="subsection-15"><header title="Subsection 1.4.1 Logarithms"><h1 class="heading hide-type" alt="Subsection 1.4.1 Logarithms">
+<span class="type">Subsection</span><span class="codenumber">0.4.1</span><span class="title">Logarithms</span>
+</h1></header>
+
+<article class="assemblage-like" id="definition-1">
+    <h5 class="heading">The Logarithm</h5>
+<p id="p-338">Let \(b&gt;0\) with \(b\neq1\text{.}\) The logarithm of \(x\) with base \(b\) is defined by</p>
+\begin{equation*}
+\log_{b}x=y\qquad\mbox{if and only if} \qquad x=b^{y}.
+\end{equation*}
+<p id="p-339">The expression \(\log_{b}x\) represents the power to which \(b\) needs to be raised in order to get \(x\text{.}\)</p>
+<p id="p-340">Two frequently used logarithmic functions are \(\log_{10}x\) (frequently written \(\log x\) without the base explicitly stated) and the natural logarithm \(\log_{e}x\) (frequently written \(\ln x\)).</p></article>
+
+<p id="p-341">Note that we have specifically defined logarithms to be inverse functions for exponentials. For instance, \(\log_{10}{1000} = 3\text{,}\) since \(10^{3} = 1000\text{.}\) Logarithmic functions give us a way to re-write exponential expressions and, more importantly, solve equations involving variables in an exponent.</p></section><section class="subsection" id="subsection-16"><header title="Subsection 1.4.2 Properties of Logarithms"><h1 class="heading hide-type" alt="Subsection 1.4.2 Properties of Logarithms">
+<span class="type">Subsection</span><span class="codenumber">0.4.2</span><span class="title">Properties of Logarithms</span>
+</h1></header><p id="p-342">Since logarithms and exponentials are inverse functions, many of the properties of logarithmic functions can be deduced directly from the properties of exponential functions. For example, the domain of all logarithmic functions is \((0,\infty)\) and the range of all logarithmic functions is \((-\infty,\infty)\) because those are the range and domain, respectively, of exponential functions. Similarly, logarithmic functions have a vertical asymptote at \(x = 0\) because exponential functions have a horizontal asymptote at \(y = 0\text{.}\) These features can be seen in <a knowl="./knowl/F_0_4_Ex1.html" knowl-id="xref-F_0_4_Ex1" alt="Figure 1.4.2 " title="Figure 1.4.2 ">Figure 2</a>.</p>
+<figure class="figure-like" id="F_0_4_Ex1"><object type="image/svg+xml" style="width:50%; margin:auto; display:block;" data="images/0-4-fig1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.4.2</span>Graphs of the functions \(y=e^{x}\) and \(y=\ln{x}\text{.}\)</figcaption></figure><p id="p-343">The following properties of logarithms can be deduced from the properties of exponential functions and the definition of the logarithm. These properties are especially useful in simplifying or solving logarithmic and exponential equations.</p>
+
+<article class="assemblage-like" id="definition-4_2">
+    <h5 class="heading">Properties of Logarithms</h5>
+<p id="p-344">For \(b&gt;0\text{,}\) \(b \ne 1\text{,}\) and \(x,y&gt;0\text{:}\) </p>
+<ol id="ol-48" style="list-style-type: decimal;">
+<li id="li-202"><p id="p-345">\(\log_{b}1=0\)  (which is the same as \(b^0 = 1\))</p></li>
+<li id="li-203"><p id="p-346">\(\log_{b}b=1\)   (which is the same as \(b^1 = b\))</p></li>
+<li id="li-204"><p id="p-347">\(\log_{b}\left(xy\right)=\log_{b}x+\log_{b}y\)   (which is the same as \(b^mb^n=b^{m+n}\))</p></li>
+<li id="li-205"><p id="p-348">\(\log_{b}\left(\dfrac{x}{y}\right)=\log_{b}x-\log_{b}y\)   (which is the same as \( \frac{b^m}{b^n} = b^{m-n}\))</p></li>
+<li id="li-206"><p id="p-349">\(\log_{b}x^{r}=r\,\log_{b}x\)   (which is the same as \((b^m)^n
+= b^{mn}\))</p></li>
+<li id="li-207"><p id="p-350">\(\log_{b}b^{x}=x\)</p></li>
+<li id="li-208"><p id="p-351">\(b^{\log_{b}x}=x\)</p></li>
+<li id="li-209"><p id="p-352">\(\log_{b}x=\log_{b}y\) if and only if \(x=y\)</p></li>
+<li id="li-210"><p id="p-353">\(\log_a b = \frac{\log_c b}{\log_c a}\)   (this is called the change of base formula)</p></li>
+</ol></article>
+
+<p id="p-354">Euler's number, \(e\text{,}\) shows up so often that we give a special name to the associated logarithm. The logarithm \(\log_e (x)\) is called the natural logarithm and is written as \(\ln(x)\text{.}\) 
+<article class="assemblage-like" id="definition-4_3">
+    <h5 class="heading">The Natural Logarithm</h5>
+    <p> The <b>natural logarithm</b> is the logarithm with Euler's number, \(e\), as the base.
+    \begin{equation*}
+        \log_{e}(x) = \ln(x)
+    \end{equation*}
+    Note that \( \ln(a) = b \) is the same as \( e^b = a \).
+    </p>
+</article>
+We will see later in this course that the exponential function \(f(x) = e^x\) has very special calculus properties and as such the natural logarithm has very special properties as well. With this in mind, most mathematicians and scientists use \(e^x\) and \(\ln(x)\) as their preferred exponential and logarithmic functions.</p>
+
+
+<article class="example-like" id="A_0_4_1"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.4.2</span>
+</h5>
+      <p>
+        Use the definition of a logarithm along with the properties of logarithms to answer
+        the following.
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              Write the exponential expression \(8^{1/3} = 2\) as a logarithmic expression.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write the logarithmic expression \(\log_2 \frac{1}{32} = -5\) as an exponential
+              expression.
+            </p>
+          </li>
+          <li>
+            <p>
+              What value of \(x\) solves the equation \(\log_2 x = 3\)?
+            </p>
+          </li>
+          <li>
+            <p>
+              What value of \(x\) solves the equation \(\log_2 4 = x\)?
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the laws of logarithms to rewrite the expression \(\log \left( x^3 y^5 \right)\)
+              in a form with no logarithms of products, quotients, or powers.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the laws of logarithms to rewrite the expression \(\log \left( \frac{x^{15}
+              y^{20}}{z^4} \right)\)
+              in a form with no logarithms of products, quotients, or powers.
+            </p>
+          </li>
+          <li>
+            <p>
+              Rewrite the expression \(\ln(8) + 5 \ln(x) + 15 \ln(x^2+8)\) as a single logarithm.
+            </p>
+          </li>
+        </ol>
+      </p>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_4_1" id="hint-act_4_1"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_4_1" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          Use the properties of logarithms.
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_4_1" id="solution-act_4_1"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_4_1" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                \(8^{1/3} = 2\) is equivalent to \(\log_8 2 = \frac{1}{3}\).
+              </p>
+            </li>
+            <li>
+              <p>
+                \(\log_2 \frac{1}{32} = -5\) is equivalent to \(2^{-5} = \frac{1}{32}\).
+              </p>
+            </li>
+            <li>
+              <p>
+                \(\log_2 x = 3\) is equivalent to \(x = 2^3 = 8\).
+              </p>
+            </li>
+            <li>
+              <p>
+                \(\log_2 4 = x\) is equivalent to \(2^x = 4\) and we see that \(x=2\) since \(2^2 = 4\).
+              </p>
+            </li>
+            <li>
+              <p>
+                Using the product and power properties
+                \begin{equation*}
+                  \log\left( x^3 y^5 \right) = 3\log(x) + 5\log(y).
+                \end{equation*}
+              </p>
+            </li>
+            <li>
+              <p>
+                Using the product, power, and quotient properties
+                \begin{equation*}
+                  \log\left( \frac{x^{15} y^{20}}{z^4} \right) = 15\log(x) + 20\log(y) - 4\log(z).
+                \end{equation*}
+              </p>
+            </li>
+            <li>
+              <p>
+                Using the power and product properties
+                \begin{equation*}
+                  \ln(8) + 5 \ln(x) + 15\ln(x^2+8) = \ln\left( 8 x^5 \left( x^2 + 8 \right)^{15}
+                  \right)
+                \end{equation*}
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+<!-- **************************************************** -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.4.4</span>
+</h5>
+<p id="p-372">Find a value of \(x\) for which \(3^{x}=13\text{.}\)</p>
+</article>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4_ex1" id="solution-4_ex1">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-4_ex1" style="display: none;" class="tex2jax_ignore">
+        <span class="solution">
+<p id="p-373">To isolate the variable \(x\text{,}\) we should take the logarithm of both sides. For convenience, let's choose to use the natural logarithm.</p>
+\begin{equation*}
+\ln(3^{x})=\ln(13).
+\end{equation*}
+<p id="p-374">Applying logarithm property (5), we find</p>
+\begin{equation*}
+x\,\ln 3=\ln 13.
+\end{equation*}
+<p id="p-375">Solving algebraically for \(x\) yields</p>
+\begin{equation*}
+x=\frac{\ln 13}{\ln 3}\approx2.3347.
+\end{equation*}
+<p id="p-376">NOTE: Our choice to use the natural logarithm was arbitrary. We could have chosen any base for our logarithm to solve this equation.</p>
+        </span></span>
+</div>
+<!-- **************************************************** -->
+
+
+<!-- **************************************************** -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.4.5</span>
+</h5>
+<p id="p-377">In 1970, the population of the United States was approximately 205.1 million people. Since that time, the population has grown at a continuous growth rate of approximately 1.05%. Assuming that this growth rate continues, when would we expect the population of the United States to reach 350 million?</p>
+</article>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-4_ex2" id="solution-4_ex2">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-4_ex2" style="display: none;" class="tex2jax_ignore">
+        <span class="solution">
+<p id="p-378">Since the rate of growth of the population is proportional to the size of the population, we should use an exponential model for this problem. That is, we want</p>
+\begin{equation*}
+P(t)=P_{0}e^{rt}
+\end{equation*}
+<p>where \(t\) is the number of years after 1970, \(P(t)\) is the population (in millions) of the United States at time \(t\text{,}\) \(P_{0}\) is the population (in millions) of the United States in 1970 (i.e. \(t=0\)) and \(r\) is the continuous rate of growth of the population. To determine when the population will reach 350 million, we must solve the equation</p>
+\begin{equation*}
+350=205.1e^{0.0105t}.
+\end{equation*}
+<p id="p-379">To solve for \(t\text{,}\) we need to first solve for the exponential expression by itself and then use logarithms. Dividing both sides of the equation by 205.1 gives</p>
+\begin{equation*}
+\frac{350}{205.1}=e^{0.0105t}.
+\end{equation*}
+<p id="p-380">Taking the natural logarithm of both sides gives</p>
+\begin{equation*}
+\ln\left(\frac{350}{205.1}\right)=\ln\left(e^{0.0105t}\right).
+\end{equation*}
+<p id="p-381">Applying logarithm property (6), we find</p>
+\begin{equation*}
+\ln\left(\frac{350}{205.1}\right)=0.0105t.
+\end{equation*}
+<p id="p-382">Finally, solving algebraically for \(t\) gives</p>
+\begin{equation*}
+t=\frac{1}{0.0105}\ln\left(\frac{350}{205.1}\right)\approx50.9\,\mbox{years} .
+\end{equation*}
+<p id="p-383">Thus, we expect the population of the United States to reach 350 million in 2021 (approximately 51 years after 1970).</p>
+        </span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+<article class="example-like" id="A_0_4_2"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.4.3</span>
+</h5>
+      <p>
+        Solve each of the following equations for \(t\), and verify your answers using a calculator.
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              \(\ln t=4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(\ln(t+3)=4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(\ln(t+3)=\ln4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(\ln(t+3)+\ln(t)=\ln4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(e^{t}=4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(e^{t+3}=4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(2e^{t+3}=4\)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              \(2e^{3t+2}=3e^{t-1}\)
+            </p>
+          </li>
+        </ol>
+      </p>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_4_2" id="hint-act_4_2"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_4_2" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          Use the properties of logarithms.
+            </p></span></span>
+</div>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_4_2" id="solution-act_4_2"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_4_2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                \(t = e^4\)
+              </p>
+            </li>
+            <li>
+              <p>
+                \(t+3 = e^4\) so \(t = e^4 - 3\)
+              </p>
+            </li>
+            <li>
+              <p>
+                \(t+3 = 4\) so \(t=1\)
+              </p>
+            </li>
+            <li>
+              <p>
+                Using the product property for logarithms, \(\ln(t(t+3)) = \ln(4)\) so \(t^2 +
+                3t = 4\).  This is quadratic so we rearrange to get \(t^2 + 3t - 4 = 0\) which
+                factors to \((t+4)(t-1) = 0\) so the solutions are \(t=1\) and \(t=-4\).
+                Substituting back to the original equation we see that \(\ln(-4+3)\) and
+                \(\ln(-4)\) do not exist so the only solution is \(t=1\).
+              </p>
+            </li>
+            <li>
+              <p>
+                \(t=\ln(4)\)
+              </p>
+            </li>
+            <li>
+              <p>
+                \(t= \ln(4) = 3\)
+              </p>
+            </li>
+            <li>
+              <p>
+                \(t+3 = \ln(2)\) so \(t = \ln(2) = 3\)
+              </p>
+            </li>
+            <li>
+              <p>
+                For the final problem we first divide by \(2\) and take the natural logarithm
+                of both sides.
+                \begin{equation*}
+                  e^{3t+1} = \frac{3}{2} e^{t-1} \implies 3t+1 = \ln(3/2) + t-1.
+                \end{equation*}
+                Therefore, \(2t = \ln(3/2) - 2\) so \(t=\frac{1}{2} \left( \ln(3/2) - 2 \right)\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+
+<article class="example-like" id="A_0_4_3"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.4.4</span>
+</h5>
+      <p>
+        Consider the following equation:
+        \begin{equation*}
+          7^{x} = 24
+        \end{equation*}
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              How many solutions should we expect to find for this equation?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Solve the equation using the log base 7.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Solve the equation using the log base 10.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Solve the equation using the natural log.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Most calculators have buttons for \(\log_{10}\) and \(\ln\), but none have a button for \(\log_{7}\). Use your previous answers to write a formula for \(\log_{7}x\) in terms of           \(\log x\) or \(\ln x\).
+            </p>
+          </li>
+        </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_4_3" id="hint-act_4_3"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_4_3" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          Use the properties of logarithms and exponents.
+            </p></span></span>
+</div>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_4_3" id="solution-act_4_3"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_4_3" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                We expect 1 solution since the exponential function \(7^x\) is always increasing.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(\log_7 (24) = x\).
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(\log (7^x) = \log(24)\) so \(x\log(7) = \log(24)\) and therefore \(x =
+                \frac{\log(24)}{\log(7)}\)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(\ln (7^x) = \ln(24)\) so \(x\ln(7) = \ln(24)\) and therefore \(x =
+                \frac{\ln(24)}{\ln(7)}\)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(\log_7(x) = \frac{\ln(x)}{\ln(7)} = \frac{\log(x)}{\log(7)}\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+<article class="example-like" id="A_0_4_4"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.4.5</span>
+</h5>
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            In the presence of sufficient resources the population of a colony of bacteria exhibits exponential growth, doubling once every three hours. What is the corresponding continuous (percentage) growth rate?
+          </p>
+        </li>
+        <li>
+          <p>
+            A hot bowl of soup is served at a dinner party.  It starts to cool according to
+            Newton's Law of Cooling so its temperature, \(T\) (measured in degrees Fahrenheit) after
+            \(t\) minutes is given by
+            \begin{equation*}
+              T(t) = 65 + 186 e^{-0.06t}.
+            \end{equation*}
+            How long will it take from the time the food is served until the temperature is
+            \(120^\circ\)F?
+          </p>
+        </li>
+        <li>
+          <p>
+            The velocity (in ft/sec) of a sky diver \(t\) seconds after jumping is given by
+            \begin{equation*}
+              v(t) = 80\left( 1-e^{-0.2t} \right).
+            \end{equation*}
+            After how many seconds is the velocity 75 ft/sec?
+          </p>
+        </li>
+      </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_4_4" id="hint-act_4_4"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_4_4" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          Use the properties of logarithms and exponents.
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_4_4" id="solution-act_4_4"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_4_4" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                If the population doubles every three hours then the exponential function
+                describing the growth is \(P(t) = P_0 2^{t/3}\).  We want to find the continuous
+                growth rate so we want to write the function as \(P(t) = P_0 e^{kt}\).
+                Therefore we need to solve the equation \(2^{t/3} = e^{kt}\) for \(k\).  Taking
+                the natural logarithm of both sides gives
+                \(\ln \left( 2^{t/3} \right) = kt\), and using the rules of exponents we see
+                that \(\frac{t}{3} \ln(2) = kt\).  Subtracting \(kt\) from both sides and
+                factoring the \(t\) gives \(t\left( \frac{\ln(2)}{3} - k \right) = 0\) so we
+                immediately see that \(k = \ln(2)/3\).
+              </p>
+            </li>
+            <li>
+              <p>
+                We need to solve the equation \(65+186e^{-0.06t} = 120\).  Subtracting 65 and
+                dividing by 186 gives \(e^{-0.06t} = \frac{55}{186}\).  Taking the natural
+                logarithm of both sides and then dividing by -0.06 gives \(t =
+                -\frac{1}{0.06} \ln \left( \frac{55}{186} \right)\).
+              </p>
+            </li>
+            <li>
+              <p>
+                We need to solve the equation \(80\left( 1-e^{-0.2t} \right) = 75\).  Dividing
+                by 80 gives \(1-e^{-0.2t} = \frac{15}{16}\).  Hence, \(e^{-0.2t} =
+                \frac{1}{16}\) and taking the natural logarithm of both sides gives \(-0.2t =
+                \ln(1/16)\).  Therefore, \(t = -\frac{1}{0.2} \ln\left( \frac{1}{16} \right)\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+</section><section class="subsection" id="subsection-17"><header title="Subsection 1.4.3 Summary"><h1 class="heading hide-type" alt="Subsection 1.4.3 Summary">
+<span class="type">Subsection</span><span class="codenumber">0.4.3</span><span class="title">Summary</span>
+</h1></header><ul id="ul-18" style="list-style-type: disc;">
+<li id="li-257"><p id="p-423">A logarithmic function can be written in the form \(f(x)=\log_{b}x\) where \(b&gt;0\text{,}\) \(b\ne1\text{,}\) and \(x&gt;0\text{.}\)</p></li>
+<li id="li-258">
+<p id="p-424">Logarithmic functions are defined to be inverse functions for exponentials.  That is</p>
+\begin{equation*}
+\log_{b}x=y\qquad\mbox{if and only if} \qquad x=b^{y}.
+\end{equation*}
+</li>
+<li id="li-259"><p id="p-425">Solving equations that contain exponential expressions frequently requires the use of logarithms; solving equations that contain logarithmic expressions frequently requires the use of exponentials.</p></li>
+</ul>
+<section class="exercises" id="exercises-4"><header title="Exercises 0.4.4 Exercises"><h1 class="heading hide-type" alt="Exercises 0.4.4 Exercises">
+<span class="type">Subsubsection</span><span class="codenumber">0.4.4</span><span class="title">Exercises</span>
+</h1></header><article class="exercise-like" id="exercise-12"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-426">Use the laws of logarithms to rewrite the expression</p>
+\begin{equation*}
+\ln \left( x^{13} \sqrt{\frac{y^9}{z^2} } \right)
+\end{equation*}
+<p>in a form with no logarithm of a power, product, or quotient.</p></article><article class="exercise-like" id="exercise-13"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-427">Solve \(\ln(5x^2+2) = 4\) for \(x\text{.}\) Give only an exact answer (no decimal approximations).</p></article><article class="exercise-like" id="exercise-14"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-428">A wooden artifact from an ancient tomb consists of 20% of the carbon-14 that is present in living trees. How long ago was the artifact made assuming that the half-life of carbon-14 is 5,730 years?</p></article></section></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>

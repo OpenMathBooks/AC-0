@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2017-08-15T13:52:29-06:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Trigonometric Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript" src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://aimath.org/mathbook/js/Mathbook.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://pythontutor.com/build/pytutor-embed.bundle.js?cc25af72af" charset="utf-8"></script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div style="display:none;">\(\def\titlecolor{#1}
+\def\scl{0.8}
+\def\titlebackground{#1}
+\def\scl{0.9}
+\def\background{#1}
+\def\scl{0.7}
+\def\titleboxcolor{#1}
+\def\boxcolor{#1}
+\def\thcounter{#1}
+\def\size{#1}
+\newcommand{\titre}{Titre}
+\renewcommand{\titre}{#2}
+\renewcommand{\theacti}{\thechapter.\arabic{acti}}
+\newcommand{\saveCount}{\setcounter{lastenum}{\value{enumi}}}
+\newcommand{\restoreCount}{\setcounter{enumi}{\value{lastenum}}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bei}{\begin{numlist2}}
+\newcommand{\eei}{\end{numlist2}}
+\newcommand{\ba}{\begin{enumerate}}
+\newcommand{\ea}{\end{enumerate}}
+\newcommand{\bal}{\begin{alphalist2}}
+\newcommand{\eal}{\end{alphalist2}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\btl}{\begin{thmlist}}
+\newcommand{\etl}{\end{thmlist}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bolda}{\boldsymbol{a}}
+\newcommand{\boldx}{\boldsymbol{x}}
+\newcommand{\boldy}{\boldsymbol{y}}
+\newcommand{\boldb}{\boldsymbol{b}}
+\newcommand{\boldv}{\boldsymbol{v}}
+\newcommand{\boldu}{\boldsymbol{u}}
+\newcommand{\bx}{\boldsymbol{x}}
+\newcommand{\by}{\boldsymbol{y}}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+\newcommand{\bd}{\boldsymbol{d}}
+\renewcommand{\thedefinition}{\thechapter.\arabic{definition}}
+\renewcommand{\thecorollary}{\thechapter.\arabic{corollary}}
+\renewcommand{\thetheorem}{\thechapter.\arabic{theorem}}
+\newcommand{\afterex}{\begin{center}\underline{}\end{center}}
+\newcommand{\afterexercises}{\nin \vfill \ }
+\newcommand{\nin}{}
+\newcommand{\tr}{\vspace{0.5in}}
+\newcommand{\lr}{\vspace{1.0in}}
+\newcommand{\mr}{\vspace{2.0in}}
+\newcommand{\br}{\vspace{3.0in}}
+\newcommand{\afterpa}{\hfill $\bowtie$}
+\newcommand{\aftera}{\hfill $\lhd$}
+\newcommand{\T}{}
+\newcommand{\B}{\rule[-1.2ex]{0pt}{0pt}}
+\newcommand{\vs}{\vspace{0.1in}}
+\newcommand{\solution}{\textbf{Solution.}}
+\newcommand{\myunit}{1 cm}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Active Calculus</span></a></h1>
+<p class="byline">Active Calculus: Matt Boelkins (Lead Author), Eric Sullivan (Local Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar" style=""><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-part-1.html" title="Index" alt="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_0_4_Logarithms.html" title="Previous" alt="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_0_6_PowersPolysRationals.html" title="Next" alt="Next">Next</a></span>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_0_4_Logarithms.html" title="Previous" alt="Previous">Prev</a><a class="up-button button toolbar-item" href="C_0.html" title="Up" alt="Up">Up</a><a class="next-button button toolbar-item" href="S_0_6_PowersPolysRationals.html" title="Next" alt="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link active"><a href="C_0.html" data-scroll="C_0"><span class="codenumber">0</span><span class="title">Preliminaries</span></a></h2>
+<ul>
+<li><a href="S_0_1_Functions.html" data-scroll="S_0_1_Functions">Lines, Slope, and Functions</a></li>
+<li><a href="S_0_2_Exponentials.html" data-scroll="S_0_2_Exponentials">Exponential Functions</a></li>
+<li><a href="S_0_3_Transformations.html" data-scroll="S_0_3_Transformations">Transformations, Compositions, and Inverses</a></li>
+<li><a href="S_0_4_Logarithms.html" data-scroll="S_0_4_Logarithms">Logarithmic Functions</a></li>
+<li><a href="S_0_5_TrigFunctions.html" data-scroll="S_0_5_TrigFunctions" class="active">Trigonometric Functions</a></li>
+<li><a href="S_0_6_PowersPolysRationals.html" data-scroll="S_0_6_PowersPolysRationals">Powers, Polynomials, and Rational Functions</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<ul>
+<li><a href="references-1.html" data-scroll="references-1">Bibliography</a></li>
+<li><a href="index-part-1.html" data-scroll="index-part-1">Index</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" border="0" alt="Powered by MathJax"></a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="S_0_5_TrigFunctions"><header title="Section 1.5 Trigonometric Functions"><h1 class="heading hide-type" alt="Section 1.5 Trigonometric Functions">
+<span class="type">Section</span><span class="codenumber">0.5</span><span class="title">Trigonometric Functions</span><a href="S_0_5_TrigFunctions.html" class="permalink">¶ permalink</a>
+</h1></header><section class="introduction" id="introduction-5"><article class="objectives" id="objectives-5"><h5 class="heading"><span class="type">Objectives</span></h5>
+<ul id="ul-19" style="list-style-type: disc;">
+<li id="li-260"><p id="p-429">How can we model systems that vary in a smooth, wavelike cycle, rising and falling again and again?</p></li>
+<li id="li-261"><p id="p-430">How can we model the shape of waves in water, sound waves, radio waves, the motion of the tides in and out over the course of a day, the shaking of an earthquake, or the varying time of sunrise over the course of a year?</p></li>
+</ul></article><p id="p-431">You probably first learned about sines, cosines, and tangents when you were studying triangles. However, these functions are amazingly useful in an enormous variety of contexts. These functions are so handy that scientists and mathematicians always keep them in mind as part of our standard toolbox. We use sines and cosines whenever we see anything that varies in a smooth wave cycle, going up and down by the same amount, again and again on a regular basis.</p>
+<article class="example-like" id="PA_0_5"><h5 class="heading">
+<span class="type">Preview Activity</span><span class="codenumber">0.5.1</span>
+</h5>
+<p id="p-432">A tall water tower is swaying back and forth in the wind. Using an ultrasonic ranging device, we measure the distance from our device to the tower (in centimeters) every two seconds with these measurements recorded below.</p>
+<table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Time (sec)</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Distance (cm)</td>
+<td class="l m b0 r0 l0 t0 lines">30.9</td>
+<td class="l m b0 r0 l0 t0 lines">23.1</td>
+<td class="l m b0 r0 l0 t0 lines">14.7</td>
+<td class="l m b0 r0 l0 t0 lines">12.3</td>
+<td class="l m b0 r0 l0 t0 lines">17.7</td>
+<td class="l m b0 r0 l0 t0 lines">26.7</td>
+<td class="l m b0 r0 l0 t0 lines">32.3</td>
+<td class="l m b0 r0 l0 t0 lines">30.1</td>
+<td class="l m b0 r0 l0 t0 lines">21.8</td>
+<td class="l m b0 r0 l0 t0 lines">13.9</td>
+<td class="l m b0 r0 l0 t0 lines">12.6</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<ol id="ol-57" style="list-style-type: lower-alpha">
+<li id="li-262"><p id="p-433">Use the coordinate plane below to create a graph of these data points. <object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/0-5-fig1.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-263"><p id="p-434">What is the water tower's maximum distance away from the device?</p></li>
+<li id="li-264"><p id="p-435">What is the smallest distance measured from the tower to the device?</p></li>
+<li id="li-265"><p id="p-436">If the water tower was sitting still and no wind was blowing, what would be the distance from the tower to the device?  We call this the tower's equilibrium position.</p></li>
+<li id="li-266"><p id="p-437">What is the maximum distance that the tower moves away from its equilibrium position?  We call this the amplitude of the oscillations.</p></li>
+<li id="li-267"><p id="p-438">How much time does it take the water tower to sway back and forth in a complete cycle?  We call this the period of oscillation.</p></li>
+</ol></article></section><section class="subsection" id="subsection-18"><header title="Subsection 1.5.1 Measuring Angles with Radians"><h1 class="heading hide-type" alt="Subsection 1.5.1 Measuring Angles with Radians">
+<span class="type">Subsection</span><span class="codenumber">0.5.1</span><span class="title">Measuring Angles with Radians</span>
+</h1></header><p id="p-439">Sines, cosines, and tangents are very useful when studying triangles. The input into each of these functions is an angle, and the output tells us the ratio of the lengths of the sides of the triangle. There are two commonly used units for measuring angles, degrees and radians, and so there are two commonly used versions of the trigonometric functions. There's \(\sin x\) where \(x\) is in degrees, and there's \(\sin x\) where \(x\) is in radians. Calculus is a lot easier if we measure angles in radians, so that's what we'll use throughout this course. If you ever have trouble getting the right numbers from your calculator, you may want to double check that your calculator is in radian mode.</p>
+<p id="p-440">So, what is a radian?</p>
+<article class="assemblage-like" id="definition-5_1">
+    <h5 class="heading">Radian</h5>
+<p id="p-441">A radian is a measure of angle which is defined so that if we have an angle with a size of one radian on a unit circle (with a radius \(r= 1\)), then the length of the arc along the circumference of the circle is also equal to one, as we see in <a knowl="./knowl/fig_0_5_radian.html" knowl-id="xref-fig_0_5_radian" alt="Figure 1.5.2 " title="Figure 1.5.2 ">Figure 2</a>. Because the circumference of a circle is \(2 \pi r\text{,}\) this means that for one complete circle,</p>
+\begin{equation*}
+360^\circ = 2 \pi \text{ radians. }
+\end{equation*}
+<p id="p-442">Similarly half a circle is</p>
+\begin{equation*}
+180^\circ = \pi \text{ radians }
+\end{equation*}
+<p>and a right angle is</p>
+\begin{equation*}
+90^\circ = \frac{\pi}{2} \text{ radians. }
+\end{equation*}
+<p id="p-443">So one radian is</p>
+\begin{equation*}
+57.3^\circ \approx \frac{180^\circ}{\pi} = 1 \text{ radian } .
+\end{equation*}
+</article>
+
+<figure class="figure-like" id="fig_0_5_radian"><object type="image/svg+xml" style="width:99%; margin:auto; display:block;" data="images/0-5-fig2.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.5.2</span>Common radian measures.</figcaption></figure>
+
+<p id="p-444">Because we define the radian in this way, this means that the arc length \(s\) along the circumference of a circle with radius \(r\) over angle \(\theta\) can be calculated as \(s = r
+\theta\) as long as the angle \(\theta\) is measured in radians.</p>
+<figure class="figure-like" id="fig_0_5_arc"><object type="image/svg+xml" style="width:30%; margin:auto; display:block;" data="images/0-5-fig3.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.5.3</span>Arc length, angle, and radius on a circle.</figcaption></figure></section><section class="subsection" id="subsection-19"><header title="Subsection 1.5.2 Sine and Cosine on the Unit Circle"><h1 class="heading hide-type" alt="Subsection 1.5.2 Sine and Cosine on the Unit Circle">
+<span class="type">Subsection</span><span class="codenumber">0.5.2</span><span class="title">Sine and Cosine on the Unit Circle</span>
+</h1></header><p id="p-445">Let's draw a unit circle with its center at the origin and think about a point moving along the circumference of this circle. We start with the point on the \(x\) axis with coordinates (1,0), as shown in the figure below, and define this location to be an angle of \(\theta = 0\) radians. Then, we let this point move up, so that our point is at an angle \(\theta\) above the \(x\) axis. The sine and cosine functions are defined so that they give us the coordinates of our point:</p>
+\begin{equation*}
+x = \cos \theta \quad \text{ and } \quad  y = \sin \theta
+\end{equation*}
+<figure class="figure-like" id="fig_0_5_unit"><object type="image/svg+xml" style="width:60%; margin:auto; display:block;" data="images/0-5-fig4.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.5.4</span>Sine and cosine on a unit circle.</figcaption></figure><p id="p-446">This means that an angle of \(\theta = 2 \pi\) carries us around one full circle and brings us back to our starting point on the \(x\) axis again, with coordinates (1,0). That means that \(\sin 2 \pi = \sin 0 = 0\text{.}\) Similarly \(\theta = 4 \pi\) carries us around two full circles, and \(\theta = 6 \pi\) carries us around three full circles.</p>
+<p id="p-447">Next we can use the Pythagorean Theorem, and remember that our hypotenuse is equal to one to see that</p>
+\begin{equation*}
+\sin^2 \theta + \cos^2 \theta = 1
+\end{equation*}
+<p id="p-448">This is a very useful relationship!</p>
+
+
+
+<article class="example-like" id="A_0_5_1"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.5.2</span>
+</h5>
+      <p>
+        In this activity we will review the trigonometry of the special angles \(0^\circ\),
+        \(30^\circ\), \(45^\circ\), and their multiples.
+        <ol style="list-style-type: lower-alpha">
+          <li>
+            <p>
+              Use the fact that \(180^\circ\) is the same as \(\pi\) radians, convert each of
+              the following angle measurements to radians.
+              <center>
+              <table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Degrees</td>
+<td class="l m b0 r0 l0 t0 lines">\(0^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(30^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(45^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(60^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(90^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(120^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(135^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(150^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(180^\circ\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Radians</td>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines">\(\pi\)</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Degrees</td>
+<td class="l m b0 r0 l0 t0 lines">\(210^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(225^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(240^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(270^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(300^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(315^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(330^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(360^\circ\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Radians</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+              </table>
+              </center>
+            </p>
+          </li>
+          <li>
+            <p>
+              In part (a) of this problem there are several patterns that can help in
+              remembering the radian conversions for certain angles.  For example, you
+              should have found that \(30^\circ\) converts to \(\frac{\pi}{6}\) radians.
+              Therefore, \(60^\circ\) should be twice \(\frac{\pi}{6}\) which indeed it is:
+              \(60^\circ = \frac{\pi}{3}\) radians.  What other similar patterns can you find?
+              What is the minimum number of radian measures that you need to memorize?
+            </p>
+          </li>
+          <li>
+            <p>
+              The sides of a \(30-60-90\) triangle follow well-known ratios.  Consider the
+              equilateral triangle on the left of the figure below.  Fill in the rest of the
+              sides and angles on the figure and use them to determine the trigonometric values of \(30^\circ\) and
+              \(60^\circ\).
+              <center>
+<table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Angle (Degrees)</td>
+<td class="l m b0 r0 l0 t0 lines">Angle (Radians)</td>
+<td class="l m b0 r0 l0 t0 lines">Sine</td>
+<td class="l m b0 r0 l0 t0 lines">Cosine</td>
+<td class="l m b0 r0 l0 t0 lines">Tangent</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">\(30^{\circ}\)</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">\(60^{\circ}\)</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+              </center>
+            </p>
+          </li>
+          <li>
+            <p>
+              The sides of a \(45-45-90\) triangle also follow well-known ratios.  Consider
+              the isosceles triangle on the right of the figure below.  Fill in the rest of
+              the sides and angles on the figure and use them to determine the trigonometric
+              values of \(45^\circ\).
+              <center>
+<table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Angle (Degrees)</td>
+<td class="l m b0 r0 l0 t0 lines">Angle (Radians)</td>
+<td class="l m b0 r0 l0 t0 lines">Sine</td>
+<td class="l m b0 r0 l0 t0 lines">Cosine</td>
+<td class="l m b0 r0 l0 t0 lines">Tangent</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines">\(45^{\circ}\)</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+              </center>
+
+              <figure>
+                  <img src="images/0-5-fig_specialright.svg" width="90%">
+              </figure>
+            </p>
+          </li>
+          <li>
+            <p>
+              Finally, we can organize all of the information about the special right
+              triangles on a well-known organizational tool: the unit circle.  The \(x\)
+              coordinate of each point is the cosine of the angle and the \(y\) coordinate of
+              each point is the sine of the angle.
+              <figure>
+                  <img src="images/0-5-UnitCircle.svg" width="99%">
+              </figure>
+            </p>
+          </li>
+        </ol>
+      </p>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_5_1" id="solution-act_5_1"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_5_1" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+        <figure>
+          <img src="images/0-5-UnitCircle_FilledIn.svg" width="99%">
+        </figure>
+        </p>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+</section><section class="subsection" id="subsection-20"><header title="Subsection 1.5.3 Sine and Cosine as Functions"><h1 class="heading hide-type" alt="Subsection 1.5.3 Sine and Cosine as Functions">
+<span class="type">Subsection</span><span class="codenumber">0.5.3</span><span class="title">Sine and Cosine as Functions</span>
+</h1></header><p id="p-456">To get beyond trigonometry, rather than using the angle \(\theta\) as the input to our sine and cosine functions, instead we will put our function input on the \(x\) axis. Then we can plot the output of on the \(y\) axis. This produces the following graph: <object type="image/svg+xml" style="width:85%; margin:auto; display:block;" data="images/0-5-fig5.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
+<p id="p-457">Here we can see that the range (output) of the sine function is the interval from \(-1\) to \(+1\text{.}\) (\(\sin x\) can never equal 2!) The domain (input) of the sine function is extends from \(-\infty\) to \(+\infty\text{,}\) but the cycle repeats every \(2 \pi\) along the \(x\) axis. (Do you understand how the definition of sine on the unit circle makes both of these facts true?)</p>
+<p id="p-458">The following terms will be very important when we describe functions like this: </p>
+
+<article class="assemblage-like" id="definition-5_2">
+    <h5 class="heading">Period of a Trig Function</h5>
+<p id="p-459">The <!--Style me with CSS--><em>period</em> of a trig function is how far along the \(x\) axis it takes to complete one full cycle. The units of the period are seconds per cycle.</p>
+</article>
+
+<article class="assemblage-like" id="definition-5_2b">
+    <h5 class="heading">Frequency of a Trig Function</h5>
+<p id="p-459">The <!--Style me with CSS--><em>frequency</em> of a trig function is the number of complete cycles completed in 1 unit.  The units of the frequency are cycles per second.</p>
+</article>
+<article class="assemblage-like" id="definition-5_3">
+    <h5 class="heading">Amplitude of a Trig Function</h5>
+<p id="p-460">The <!--Style me with CSS--><em>amplitude</em> of a trig function is how far it goes on the \(y\) axis above and below its average value.</p>
+</article>
+
+
+<p id="p-461">The function \(f(x) = \sin x\) has a period of \(2 \pi\) and an amplitude of \(1\text{.}\) If we plot both the sine and the cosine functions together we see the following graph: <object type="image/svg+xml" style="width:85%; margin:auto; display:block;" data="images/0-5-fig6.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> From this we see that the function \(g(x) = \cos x\) also has a period of \(2 \pi\) and an amplitude of \(1\text{.}\) The difference is that \(\sin 0 = 0\text{,}\) so the sine function starts at its average value, halfway between a peak and a trough. On the other hand \(\cos 0 = 1\text{,}\) so the cosine function starts at a peak. This means that we can turn a cosine function into a sine function and visa versa simply by shifting:</p>
+\begin{equation*}
+\sin(x) = \cos \left( x - \frac{\pi}{2} \right)  \text{ and }   \cos(x) = \sin
+\left( x + \frac{\pi}{2} \right).
+\end{equation*}
+</section><section class="subsection" id="subsection-21"><header title="Subsection 1.5.4 Sinusoidal Functions in the Real World"><h1 class="heading hide-type" alt="Subsection 1.5.4 Sinusoidal Functions in the Real World">
+<span class="type">Subsection</span><span class="codenumber">0.5.4</span><span class="title">Sinusoidal Functions in the Real World</span>
+</h1></header><p id="p-462">To model real data with the sine or cosine function, we must be able to change the amplitude, the period, and the average value of our wave, to get what we call a <!--Style me with CSS--><em>sinusoidal</em> function. Every sinusoidal function can be written either of the two following forms.  Note well that the sine function could be replaced by the cosine function.</p>
+
+<article class="assemblage-like" id="definition-5_4">
+    <h5 class="heading">Forms of a Sinusoidal Function</h5>
+\begin{equation*}
+f(t) = A \sin( B ( t - t_0) ) + C \quad \mbox{ or } \quad  f(t) = A \sin( B t + \phi) + C
+\end{equation*}
+<ul id="ul-21" style="list-style-type: disc;">
+<li id="li-275"><p id="p-463">\(|A|\) is the amplitude (the distance from the centerline of the wave to the maximum or minimum).</p></li>
+<li id="li-276"><p id="p-464">\(B\) is the angular frequency, which determines the period, with \(B = \frac{2 \pi}{\mbox{Period} }\text{.}\)</p></li>
+<li id="li-277"><p id="p-465">\(C\) is the average value.</p></li>
+<li id="li-278"><p id="p-466">\(t_0\) is the shift along the \(t\) axis, a time when \(f\) is at an average value and increasing</p></li>
+<li id="li-279"><p id="p-467">\(\phi\) is the shift in radians, the angle at which the oscillations begin</p></li>
+</ul>
+</article>
+<p id="p-468">The parameter \(B\) can be a little surprising. Because \(B\) is inversely related to the period, this means that larger values of \(B\) result in a shorter period, and smaller values of \(B\) result in a longer period, as we see in the graphs below: <object type="image/svg+xml" style="width:99%; margin:auto; display:block;" data="images/0-5-fig7.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> <object type="image/svg+xml" style="width:99%; margin:auto; display:block;" data="images/0-5-fig7b.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p>
+
+When modeling with sinusoidal functions it is sometimes more convenient to use sine versus cosine or visa versa.  
+<article class="assemblage-like" id="definition-5_4b">
+    <h5 class="heading">Modeling with Sine and Cosine</h5>
+    Below are some guidelines for modeling with the sine and cosine functions.
+\begin{equation*}
+f(t) = A \sin( B ( t - t_0) ) + C \quad \mbox{ or } \quad  f(t) = A \cos( B (t - t_0)) + C
+\end{equation*}
+    <ul>
+        <li>If you can find the exact time when the sinusoidal function reaches the average value you should use a sine function.  </li>
+        <ul>
+            <li>The shift \(t_0\) is the time when the function reaches the average value.</li>
+            <li>If the sinusoidal function is going up after the average value then \(A\) should be positive.</li>
+            <li>If the sinusoidal function is going down after the average value then \(A\) should be negative.</li>
+        </ul>
+        <li>If you can find the exact time when the sinusoidal function reaches a maximum or a minimum you should use a cosine function.  </li>
+        <ul>
+            <li>The shift \(t_0\) is the time when the function reaches the maximum or minimum.</li>
+            <li>If the sinusoidal function is at a maximum at time \(t_0\) then \(A\) should be positive.</li>
+            <li>If the sinusoidal function is at a minimum at time \(t_0\) then \(A\) should be negative.</li>
+        </ul>
+        <li>The period is most easily measured from peak to peak or from trough to trough. Remember that \(B = \frac{2\pi}{\text{Period}}\).</li>
+    </ul>
+</article>
+
+<!-- <div class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-example-13" id="example-13"> -->
+<article class="example-like">
+    <h5 class="heading">
+        <span class="type">Example</span>
+        <span class="codenumber">0.5.5</span>
+</h5>
+<p id="p-469">Suppose we measure the temperature every hour throughout a day and find that \(T\) varies in a smooth sinusoidal pattern. We find that the average temperature is \(60^\circ\text{,}\) the amplitude is \(20^\circ\text{,}\) and the period is 24 hours. The minimum temperature is at 4am, the maximum temperature is at 4pm, and so it is at the average temperature and increasing at 10am. How would we model the temperature as a sinusoidal function?</p>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-5_1" id="solution-5_1">
+            <span class="solution"><span class="type">Solution
+                </span>
+            </span>
+        </a>
+    </span>
+    <span id="hk-solution-5_1" style="display: none;" class="tex2jax_ignore">
+        <span class="solution"><p id="p-20">
+<p id="p-470">Given the information above we could model these temperatures with the following formula:</p>
+\begin{equation*}
+T(t) = 20 \sin \left( \frac{2 \pi}{24} (t - 10) \right) + 60.
+\end{equation*}
+<p id="p-471">A graph of the function looks like this: <object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/0-5-fig8.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Notice that the maximum temperature is \(80^\circ\) and the minimum temperature is \(40^\circ\text{.}\) We could tell this directly from the formula, because output of the sine function varies between \(-1\) and \(+1\text{,}\) and this is multiplied by 20. As a result, the most we ever add to 60 is 20 to get a maximum temperature of 80, and the most we ever subtract from 60 is 20, to get a minimum temperature of 40.</p>
+        </span>
+        </span>
+</div>
+
+
+<article class="example-like" id="A_0_5_2"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.5.3</span>
+</h5>
+      <p> The figure below gives us the voltage produced by an electrical circuit as a function of time.
+      </p>
+      <figure>
+        <img src="images/0-5-fig9.svg" width="99%">
+      </figure>
+      <ol style="list-style-type: lower-alpha">
+        <li>
+          <p>
+            What is the amplitude of the oscillations?
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the period of the oscillations?
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the average value of the voltage?
+          </p>
+        </li>
+        <li>
+          <p>
+            What is the shift along the \(t\) axis, \(t_0\)?
+          </p>
+        </li>
+        <li>
+          <p>
+            What is a formula for this function?
+          </p>
+        </li>
+      </ol>
+</article>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_5_2" id="hint-act_5_2"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_5_2" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                measure the amplitude at half the maximum minus the minimum.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                measure the period from peak to peak or from trough to trough.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                the average value comes from the \(y \) values.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                find the middle of the voltage values.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                be sure to get the shift correct.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                There are infinitely many answers to this
+                problem!
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_5_2" id="solution-act_5_2"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_5_2" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+                The amplitude is \(A = \frac{1}{2}(50-(-10)) = 30\).
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The period is the distance from peak to peak.  In this case there is a peak at
+                approximately \(t=0.0125\) seconds and \(t = 0.0325\) seconds.  Hence, the period is
+                \(0.02\) seconds.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The average value of the voltage is 20.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The simplest shift is probably to the first peak at \(t = 0.0125\) seconds.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                \(V(t) = 30 \cos\left( \frac{2\pi}{0.02} \left( t - 0.0125 \right) \right) + 20\).
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+
+<article class="example-like" id="A_0_5_3"><h5 class="heading">
+<span class="type">Activity</span><span class="codenumber">0.5.4</span>
+</h5>
+<p id="p-491">Suppose the following sinusoidal function models the water level on a pier in the ocean as it changes due to the tides during a certain day.</p>
+\begin{equation*}
+w(t) = 4.3 \sin \left( 0.51 t + 0.82 \right) + 10.6
+\end{equation*}
+<ol id="ol-62" style="list-style-type: lower-alpha;">
+<li id="li-296"><p id="p-492">Using the formula above, make a table showing the water level every two hours for a 24 hour period starting at midnight. <table>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">time (hours)</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">8</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">12</td>
+<td class="l m b0 r0 l0 t0 lines">14</td>
+<td class="l m b0 r0 l0 t0 lines">16</td>
+<td class="l m b0 r0 l0 t0 lines">18</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">22</td>
+<td class="l m b0 r0 l0 t0 lines">24</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">water level (ft)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+</table></p></li>
+<li id="li-297"><p id="p-493">Sketch a graph of this function using the data from your table in part (a). <object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/0-5-fig10.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></li>
+<li id="li-298"><p id="p-494">What is the period of oscillation of this function?</p></li>
+<li id="li-299"><p id="p-495">What time is high tide?</p></li>
+</ol></article>
+
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-act_5_3" id="hint-act_5_3"><span class="hint"><span class="type">Hint</span></span></a></span><span id="hk-hint-act_5_3" style="display: none;" class="tex2jax_ignore"><span class="hint">
+        <p>
+          <ol style="list-style-type: lower-alpha">
+            <li>
+              <p>
+              It would be helpful to use a calculator for this.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Remember that the sinusoidal function will be smooth so be sure to interpolate your points with smooth curves.
+              </p>
+            </li>
+
+            <li>
+              <p>
+              Recall that the period is given as \( \text{period} = \frac{2\pi}{B}\).  What is \(B\) in this instance?
+              </p>
+            </li>
+
+            <li>
+              <p>
+              Find the first maximum.
+              </p>
+            </li>
+          </ol>
+            </p></span></span>
+</div>
+<div class="posterior">
+    <span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-act_5_3" id="solution-act_5_3"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-act_5_3" style="display: none;" class="tex2jax_ignore"><span class="solution">
+        <p>
+        The period of the oscillation is 
+        \begin{equation*}
+            \text{Period} = \frac{2\pi}{B} = \frac{2\pi}{0.51} \approx 12.32 \text{ hours per cycle }
+        \end{equation*}
+        The function can be rewritten as \(w(t) \approx 4.3 \sin( 0.51 (t+1.6078)) + 10.6 \). Hence, the tide was at its average value 1.6078 hours before the 24 hour period started.  A quarter of the cycle later it will be at a maximum, and a quarter of the period is 3.08 hours.  Hence, high tide will be at approximatly 1.472 hours from the beginning of the data. 
+            </p></span></span>
+</div>
+<!-- **************************************************** -->
+
+
+
+
+
+</section><section class="subsection" id="subsection-22"><header title="Subsection 1.5.5 The Tangent Function"><h1 class="heading hide-type" alt="Subsection 1.5.5 The Tangent Function">
+<span class="type">Subsection</span><span class="codenumber">0.5.5</span><span class="title">The Tangent Function</span>
+</h1></header><p id="p-497">The tangent function has a completely different shape than the sine and cosine functions because it is defined to be</p>
+\begin{equation*}
+\tan \theta = \frac{\sin \theta}{\cos \theta}
+\end{equation*}
+<p>as long as \(\cos \theta \neq 0\text{,}\) so that we don't have a divide-by-zero problem. This means that the tangent function is undefined at \(\pm \pi/2, \pm 3 \pi/2, \cdots\text{,}\) and the function has vertical asymptotes at these points. <object type="image/svg+xml" style="width:80%; margin:auto; display:block;" data="images/0-5-fig11.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object> Because the tangent function blows up to infinity, we don't often fit tangent functions to real world data.</p></section><section class="subsection" id="subsection-23"><header title="Subsection 1.5.6 Inverse Sine, Cosine, and Tangent Functions"><h1 class="heading hide-type" alt="Subsection 1.5.6 Inverse Sine, Cosine, and Tangent Functions">
+<span class="type">Subsection</span><span class="codenumber">0.5.6</span><span class="title">Inverse Sine, Cosine, and Tangent Functions</span>
+</h1></header><p id="p-498">Suppose we want to find the value of \(x\) so that \(\sin x = 0.75\text{.}\) To find this, we use an inverse sine function, written as either \(\arcsin\) or \(\sin^{-1}\text{.}\) In this case \(\sin^{-1} 0.75 \approx 0.848\text{,}\) because \(\sin 0.848 \approx 0.75\text{.}\) The range of the sine function only goes from \(-1\) to \(+1\text{,}\) so that means the domain of \(\arcsin\) only goes from \(-1\) to \(+1\text{.}\) It is impossible to find a solution to \(\sin x = 3\text{,}\) because the sine function doesn't go that high!</p>
+<p id="p-499">It is important to remember that the sine function repeats itself in the same pattern again and again, every \(2\pi\text{,}\) so \(x = 0.848\) is not the only solution to \(\sin x = 0.75\text{.}\) Another solution is \(x = 0.848 + 2 \pi \approx 7.13\text{.}\) Another solution is \(x = 0.848 + 4
+\pi \approx 13.4.\text{.}\) And of course we could subtract multiples of \(2 \pi\) as well to get \(x = 0.848 - 2 \pi \approx -5.44\text{.}\) As a result, we have the \(\arcsin\) function output the value between \(-\pi/2\) and \(+\pi/2\text{.}\) This means that the arcsine function has a very limited domain and range, only existing for \(-1 \leq x \leq 1\) and \(-\pi/2 \leq y \leq
+\pi/2\text{.}\)</p>
+<p id="p-500">Warning: Even though we write the inverse sine function as \(\sin^{-1} x\text{,}\) it is a completely different thing than \(1 / \sin x\text{.}\)</p>
+\begin{equation*}
+\sin^{-1}x \neq \frac{1}{\sin x}
+\end{equation*}
+<p id="p-501">We can define a similar inverse function for the cosine, which we call \(\arccos\) or \(\cos^{-1}\text{.}\) The domain of this function is \(-1 \leq x \leq 1\text{,}\) and we choose the range to be \(0 \leq y \leq \pi\text{.}\)</p>
+<p id="p-502">Recall that the tangent function has a range going all the way from negative infinity to positive infinity, as \(x\) goes from \(-\pi/2\) to \(+\pi/2\text{.}\) As a result, the inverse tangent function has a domain of \(-\infty \lt  x \lt  \infty\text{,}\) and a range of \(-\pi/2 \leq y
+\leq \pi/2\text{.}\) The three primary inverse trigonometric functions are shown in <a knowl="./knowl/F_0_5_inverse_trig.html" knowl-id="xref-F_0_5_inverse_trig" alt="Figure 1.5.7 " title="Figure 1.5.7 ">Figure 7</a>.</p>
+<figure class="figure-like" id="F_0_5_inverse_trig"><object type="image/svg+xml" style="width:110%; margin:auto; display:block;" data="images/0-5-fig12.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><figcaption><span class="heading">Figure</span><span class="codenumber">0.5.7</span>The inverse trigonometric functions</figcaption></figure></section><section class="subsection" id="subsection-24"><header title="Subsection 1.5.7 Summary"><h1 class="heading hide-type" alt="Subsection 1.5.7 Summary">
+<span class="type">Subsection</span><span class="codenumber">0.5.7</span><span class="title">Summary</span>
+</h1></header><ul id="ul-22" style="list-style-type: disc;">
+<li id="li-300"><p id="p-503">Trigonometric functions are utilized to model periodic behavior such as tides, sound waves, or voltage through an electrical circuit.</p></li>
+<li id="li-301">
+<p id="p-504">Converting between radian measure and degree measure can be achieved by remembering that</p>
+\begin{equation*}
+2\pi \text{ radians }  = 360^\circ
+\end{equation*}
+</li>
+<li id="li-302">
+<p id="p-505">for \(f(t) = A \sin( B ( t - t_0) ) + C\) or \(f(t) = A \sin( B t + \phi) + C\) </p>
+<ul id="ul-23" style="list-style-type: circle;">
+<li id="li-303"><p id="p-506">\(A\) is the amplitude.</p></li>
+<li id="li-304"><p id="p-507">\(B\) is the angular frequency, which determines the period, with \(B = \frac{2 \pi}{\mbox{Period} }\text{.}\)</p></li>
+<li id="li-305"><p id="p-508">\(C\) is the average value.</p></li>
+<li id="li-306"><p id="p-509">\(t_0\) is the shift along the \(t\) axis, a time when \(f\) is at an average value and increasing</p></li>
+<li id="li-307"><p id="p-510">\(\phi\) is the shift in radians, the angle at which the oscillations begin</p></li>
+</ul>
+</li>
+</ul>
+<section class="exercises" id="exercises-5"><header title="Exercises 0.5.8 Exercises"><h1 class="heading hide-type" alt="Exercises 0.5.8 Exercises">
+<span class="type">Subsubsection</span><span class="codenumber">0.5.8</span><span class="title">Exercises</span>
+</h1></header><article class="exercise-like" id="exercise-15"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p id="p-511">What is the formula for a sinusoidal function that has a minimum at coordinates \((3,6)\) followed by a maximum at \((5,9)\text{?}\)</p></article><article class="exercise-like" id="exercise-16"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p id="p-512">For each of the following trigonometric functions find the amplitude, period, and phase shift.</p>
+\begin{align*}
+a(x) \amp = -\sqrt{19} \sin\left(  7 \pi x + 18 \right)\\
+b(x) \amp = -15 \cos\left( 5\left( x+\frac{\pi}{2} \right) \right)\\
+c(x) \amp = -2 \cos\left( \frac{x}{7} \right)\\
+d(x) \amp = 5 \cos\left( 5x-\frac{\pi}{8} \right)
+\end{align*}
+</article><article class="exercise-like" id="exercise-17"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p id="p-513">Write the equation of the trigonometric function shown in each plot below. <object type="image/svg+xml" style="width:99%; margin:auto; display:block;" data="images/0-5-fig13.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object></p></article>
+
+<!--
+<article class="exercise-like" id="exercise-18"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-514">If we take a sinusoidal function \(f(t)= A \sin ( B (t - t_0)) + C\) and replace one of the parameters with a another function, say a linear function, we can create more complicated shapes. Find formulas for the function plotted in the following graphs.</p>
+<object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-36.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-37.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-38.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><object type="image/svg+xml" style="width:100%; margin:auto; display:block;" data="images/image-39.svg" alt=""><p style="margin:auto">&lt;&lt;SVG image is unavailable, or your browser cannot render it&gt;&gt;</p></object><span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-solution-21" id="solution-21"><span class="solution"><span class="type">Solution</span></span></a></span><span id="hk-solution-21" style="display: none;" class="tex2jax_ignore"><span class="solution"><p id="p-515"></p>
+<ol id="ol-63" style="list-style-type: lower-alpha;">
+<li id="li-308"><p id="p-516">\(f(t) = 2\cos(t) + 3 + 0.5*t\) over the range \([0,20]\)</p></li>
+<li id="li-309"><p id="p-517">\(f(t) = 3t \sin(3t)\) over the range \([0,10]\)</p></li>
+<li id="li-310"><p id="p-518">\(f(t) = 15\cos(2t) + 5-t^2\) over \([-10,10]\)</p></li>
+<li id="li-311"><p id="p-519">\(f(t) = 5\cos(t) + \sin(5t)\)</p></li>
+</ol></span></span> </article>
+-->
+
+<article class="exercise-like" id="exercise-19"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p id="p-520">The number of hours of daylight varies sinusoidally throughout the year. The maximum occurs on the summer solstice, June 21, when we have 15 hours and 50 minutes of daylight. The minimum occurs on the winter solstice, December 21, when we have only 8 hours and 33 minutes of daylight. Find the formula for a function to describe this. The input to your function should be \(d\text{,}\) the number of days since the beginning of the year, so that \(d = 5\) on January 5. The output of your function should be the amount of daylight, in minutes. Assume that this is not a leap year. Hint: Because we know the date of maximum, it is easier to write this in terms of a cosine function.</p></article></section></section></section></div></main>
+</div>
+<script type="text/javascript">createAllVisualizersFromHtmlAttrs();</script>
+</body>
+</html>
